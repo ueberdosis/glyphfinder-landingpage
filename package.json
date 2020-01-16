@@ -1,0 +1,12 @@
+{
+  "name": "glyphfinder-landingpage",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "start": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0"
+  }
+}
