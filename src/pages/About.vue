@@ -5,7 +5,7 @@
     <form @submit.prevent="onSubmit">
       <div>
         <label for="email">Email</label>
-        <input name="email" />
+        <input name="email" v-model="email" />
       </div>
 
       <div>
@@ -23,10 +23,18 @@ export default {
     title: 'About us'
   },
 
+  data() {
+    return {
+      email: null,
+    }
+  },
+
   methods: {
     onSubmit() {
       axios
-        .post('https://mailing.ueberdosis.io/mailcoach/subscribe/b4741e9b-69b7-4ba3-8828-4500236686fe')
+        .post('https://mailing.ueberdosis.io/mailcoach/subscribe/b4741e9b-69b7-4ba3-8828-4500236686fe', {
+          email: this.email,
+        })
         .then(response => {
           console.log({response})
         })
