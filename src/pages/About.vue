@@ -32,7 +32,7 @@ export default {
   methods: {
     onSubmit() {
       axios
-        .post('https://mailing.ueberdosis.io/mailcoach/subscribe/b4741e9b-69b7-4ba3-8828-4500236686fe', {
+        .post('https://mailing.ueberdosis.io/api/subscribe/b4741e9b-69b7-4ba3-8828-4500236686fe', {
           email: this.email,
         })
         .then(response => {
