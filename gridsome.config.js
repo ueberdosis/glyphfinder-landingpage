@@ -18,7 +18,14 @@ function addStyleResource(rule) {
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: [],
+  siteUrl: 'https://glyphfinder.com/',
+  titleTemplate: '%s',
+  port: 3000,
+  plugins: [
+    {
+      use: '@gridsome/plugin-sitemap',
+    },
+  ],
   chainWebpack(config) {
     // Load variables for all vue-files
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
