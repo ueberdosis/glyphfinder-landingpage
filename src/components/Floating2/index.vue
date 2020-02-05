@@ -12,6 +12,7 @@ let Engine = Matter.Engine,
   Render = Matter.Render,
   World = Matter.World,
   Mouse = Matter.Mouse,
+  Body = Matter.Body,
   Bodies = Matter.Bodies,
   Common = Matter.Common,
   Vertices = Matter.Vertices,
@@ -23,21 +24,9 @@ let Engine = Matter.Engine,
 export default {
   methods: {
     init() {
-      cancelAnimationFrame(this.idRAF)
-
-      let width = this.$el.clientWidth
-      let height = this.$el.clientHeight
-      let offset = -1
-
-      this.engine.events = {}
-      World.clear(this.engine.world)
-      Engine.clear(this.engine)
-
       this.engine = Engine.create()
-      this.engine.world.gravity.x = 0
-      this.engine.world.gravity.y = 0
+      this.engine.world.gravity.scale = 0
 
-      // create a renderer
       this.render = Render.create({
         element: this.$el,
         engine: this.engine,
@@ -45,8 +34,8 @@ export default {
           wireframes: false,
           background: 'transparent',
           pixelRatio: 'auto',
-          width: width,
-          height: height,
+          width: this.$el.clientWidth,
+          height: this.$el.clientHeight,
           showDebug: false,
           showBroadphase: false,
           showBounds: false,
@@ -65,99 +54,54 @@ export default {
         }
       })
 
-      // create two boxes and a ground
-      // add all of the bodies to the world
-      World.add(this.engine.world, [
-        Bodies.rectangle(width / 2, height - offset, width, 1, {
-          isStatic: true,
-          render: {
-            fillStyle: '#FFFFFF'
-          }
-        }),
-        Bodies.rectangle(width / 2, offset, width, 1, {
-          isStatic: true,
-          render: {
-            fillStyle: '#FFFFFF'
-          }
-        }),
-        Bodies.rectangle(offset, height / 2, 1, height, {
-          isStatic: true,
-          render: {
-            fillStyle: '#FFFFFF'
-          }
-        }),
-        Bodies.rectangle(width - offset, height / 2, 1, height, {
-          isStatic: true,
-          render: {
-            fillStyle: '#FFFFFF'
-          }
-        })
-      ])
-
       for (let i = 0; i < 50; i++) {
-        // let radius = 2 + Math.random() * 40
+        const spriteSize = 300
         const size = 100
-
-        World.add(
-          this.engine.world,
-          Bodies.rectangle(
-            40 + Math.random() * width - 80,
-            40 + Math.random() * 100,
-            size,
-            size,
-            { 
-              // chamfer: {
-              //   radius: 12,
-              // },
-              // velocity: {
-              //   x: Common.random(-3, 3) + 3, 
-              //   y: Common.random(-3, 3) + 3
-              // },
-              render: {
-                fillStyle: '#F25D48',
-                sprite: {
-                  xScale: 0.33,
-                  yScale: 0.33,
-                  texture: 'https://drop.philipp-kuehn.com/hWVABOql3k.png',
+        const body = Bodies.rectangle(
+          Common.random(-this.render.options.width, this.render.options.width), 
+          Common.random(-this.render.options.height, this.render.options.height),
+          size,
+          size,
+          { 
+            friction: 0,
+            frictionAir: 0,
+            render: {
+              fillStyle: '#F25D48',
+              sprite: {
+                xScale: size / spriteSize,
+                yScale: size / spriteSize,
+                texture: 'https://drop.philipp-kuehn.com/hWVABOql3k.png',
+              },
+            },
+            plugin: {
+              wrap: {
+                min: {
+                  x: 0,
+                  y: 0,
+                },
+                max: {
+                  x: this.render.canvas.width,
+                  y: this.render.canvas.height,
                 },
               },
-              // plugin: {
-              //   wrap: {
-              //       min: { x: this.render.bounds.min.x, y: this.render.bounds.min.y },
-              //       max: { x: this.render.bounds.max.x, y: this.render.bounds.max.y }
-              //   }
-              // },
             },
-          ),
+          },
         )
+
+        Body.setVelocity(body, {
+          x: Common.random(-3, 3) + 3, 
+          y: Common.random(-3, 3) + 3,
+        })
+
+        World.add(this.engine.world, body)
       }
 
-      // run the engine
       Engine.run(this.engine)
-
-      // run the renderer
       Render.run(this.render)
-
-      this.inc = 0
-
-      this.engine.world.gravity.y = 4
-
-      this.update()
     },
-
-    update() {
-      if (this.inc > 8) {
-        this.engine.world.gravity.x = Math.cos(this.inc / 55)
-        this.engine.world.gravity.y = Math.sin(this.inc / 55)
-      }
-      this.inc++
-      this.idRAF = requestAnimationFrame(this.update.bind(this))
-    }
   },
 
   mounted() {
-    this.engine = Engine.create()
-    this.idRAF = null
     this.init()
   },
 
