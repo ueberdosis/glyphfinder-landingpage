@@ -1,11 +1,13 @@
 <template>
   <Layout>
     <!-- <floating :glyphs="glyphs"/> -->
+
+    <floating2 />
   </Layout>
 </template>
 
 <script>
-// import Floating from '@/components/Floating'
+import Floating2 from '@/components/Floating2'
 
 export default {
   metaInfo: {
@@ -13,7 +15,7 @@ export default {
   },
 
   components: {
-    // Floating
+    Floating2
   },
 
   data() {

@@ -11,6 +11,7 @@
     "axios": "^0.19.2",
     "gridilydidily": "^3.0.1",
     "gridsome": "^0.7.0",
+    "matter-js": "^0.14.2",
     "paper": "^0.12.4"
   },
   "devDependencies": {
