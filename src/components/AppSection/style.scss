@@ -1,0 +1,72 @@
+.app-section {
+  position: relative;
+
+  &--black {
+    background-color: $colorPureBlack;
+    color: rgba($colorWhite, 0.5);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $colorWhite;
+    }
+  }
+
+  &--red {
+    background-color: $colorRed;
+    color: rgba($colorBlack, 0.5);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $colorBlack;
+    }
+  }
+
+  &__wave {
+    position: absolute;
+    z-index: 1;
+    top: -1px;
+    left: 0;
+    width: calc(100% + 1px);
+    height: auto;
+    user-select: none;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 1.5rem;
+    max-width: 66rem;
+    margin: 0 auto;
+
+    @media screen and (min-width: 700px) {
+      padding: 8rem 3rem;
+    }
+  }
+
+  &--full &__inner {
+    padding: 0;
+    max-width: none;
+  }
+
+  // main > &:first-child &__inner {
+  //   padding-top: 8rem;
+
+  //   @media screen and (min-width: 700px) {
+  //     padding-top: 12rem;
+  //   }
+  // }
+
+  // *:not(main) > &:first-child &__inner,
+  // &--black + &--black &__inner,
+  // &.has-wave &__inner {
+  //   padding-top: 0;
+  // }
+}

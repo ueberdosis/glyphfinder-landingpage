@@ -3,7 +3,10 @@
 </template>
 
 <script>
-import Matter from 'matter-js';
+import Matter from 'matter-js'
+import MatterWrap from 'matter-wrap'
+
+Matter.use(MatterWrap)
 
 let Engine = Matter.Engine,
   Render = Matter.Render,
@@ -22,8 +25,10 @@ export default {
     init() {
       cancelAnimationFrame(this.idRAF)
 
-      let width = window.innerWidth
-      let height = window.innerHeight
+      console.log(this)
+
+      let width = this.$el.clientWidth
+      let height = this.$el.clientHeight
       let offset = -1
 
       this.engine.events = {}
@@ -106,14 +111,24 @@ export default {
               // chamfer: {
               //   radius: 12,
               // },
+              // velocity: {
+              //   x: Common.random(-3, 3) + 3, 
+              //   y: Common.random(-3, 3) + 3
+              // },
               render: {
                 fillStyle: '#F25D48',
                 sprite: {
                   xScale: 0.33,
                   yScale: 0.33,
-                  texture: 'https://drop.philipp-kuehn.com/8gdPYECUQE.png',
+                  texture: 'https://drop.philipp-kuehn.com/hWVABOql3k.png',
                 },
               },
+              // plugin: {
+              //   wrap: {
+              //       min: { x: this.render.bounds.min.x, y: this.render.bounds.min.y },
+              //       max: { x: this.render.bounds.max.x, y: this.render.bounds.max.y }
+              //   }
+              // },
             },
           ),
         )
