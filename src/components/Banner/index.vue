@@ -6,17 +6,17 @@
       </div>
     </div>
     <div class="c-banner__background">
-      <floating2 />
+      <floating-glyphs />
     </div>
   </div>
 </template>
 
 <script>
-import Floating2 from '@/components/Floating2'
+import FloatingGlyphs from '@/components/FloatingGlyphs'
 
 export default {
   components: {
-    Floating2,
+    FloatingGlyphs,
   }
 }
 </script>
