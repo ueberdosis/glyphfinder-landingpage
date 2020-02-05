@@ -25,8 +25,6 @@ export default {
     init() {
       cancelAnimationFrame(this.idRAF)
 
-      console.log(this)
-
       let width = this.$el.clientWidth
       let height = this.$el.clientHeight
       let offset = -1
@@ -164,12 +162,8 @@ export default {
   },
 
   beforeDestroy() {
-    if (this.render) {
-      this.render.canvas.remove()
-      this.render.canvas = null
-      this.render.context = null
-      this.render.textures = {}
-    }
+    World.clear(this.engine.world)
+    Engine.clear(this.engine)
   }
 }
 </script>
