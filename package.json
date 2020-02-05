@@ -12,8 +12,7 @@
     "gridilydidily": "^3.0.1",
     "gridsome": "^0.7.0",
     "matter-js": "^0.14.2",
-    "matter-wrap": "^0.2.0",
-    "paper": "^0.12.4"
+    "matter-wrap": "^0.2.0"
   },
   "devDependencies": {
     "node-sass": "^4.13.1",
