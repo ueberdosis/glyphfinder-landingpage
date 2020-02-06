@@ -9,8 +9,10 @@
   "dependencies": {
     "@gridsome/plugin-sitemap": "^0.2.3",
     "axios": "^0.19.2",
+    "collect.js": "^4.20.3",
     "gridilydidily": "^3.0.1",
     "gridsome": "^0.7.0",
+    "load-asset": "^1.2.0",
     "matter-js": "^0.14.2",
     "matter-wrap": "^0.2.0"
   },

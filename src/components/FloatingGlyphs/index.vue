@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import collect from 'collect.js'
 import Matter from 'matter-js'
 import MatterWrap from 'matter-wrap'
 
@@ -22,6 +23,13 @@ let Engine = Matter.Engine,
   MouseConstraint = Matter.MouseConstraint;
 
 export default {
+  props: {
+    images: {
+      default: () => ([]),
+      type: Array,
+    }
+  },
+
   data() {
     return {
       width: null,
@@ -69,26 +77,27 @@ export default {
         }
       })
 
-      const count = Math.floor((this.width * this.height) / 40000)
+      const count = Math.floor((this.width * this.height) / 35000)
 
       for (let i = 0; i < count; i++) {
-        const spriteSize = 300
+        const image = collect(this.images).random()
+        const spriteSize = image.width
         const size = Common.random(50, 150)
         const body = Bodies.rectangle(
-          Common.random(-this.render.options.width, this.render.options.width), 
-          Common.random(-this.render.options.height, this.render.options.height),
+          Common.random(0, this.render.options.width), 
+          Common.random(0, this.render.options.height),
           size,
           size,
           { 
             friction: 0,
             frictionAir: 0,
-            restitution: 1,
+            restitution: 1.05,
             render: {
               fillStyle: '#F25D48',
               sprite: {
                 xScale: size / spriteSize,
                 yScale: size / spriteSize,
-                texture: 'https://drop.philipp-kuehn.com/hWVABOql3k.png',
+                texture: image.src,
               },
             },
             plugin: {
