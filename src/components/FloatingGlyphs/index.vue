@@ -96,7 +96,6 @@ export default {
             friction: 0,
             frictionAir: 0,
             restitution: 1.05,
-            // rotation: 45,
             render: {
               fillStyle: '#F25D48',
               sprite: {
@@ -121,8 +120,10 @@ export default {
         )
 
         Body.setVelocity(body, {
-          x: Common.random(-2, 2) + 2, 
-          y: Common.random(-2, 2) + 2,
+          // x: Common.random(-2, 2) + 2, 
+          // y: Common.random(-2, 2) + 2,
+          x: Common.random(-3, 3), 
+          y: Common.random(-3, 3),
         })
 
         Body.rotate(body, Common.random(0, 360))
