@@ -2,8 +2,18 @@
   <Layout>
     <app-section color="red" width="full">
       <banner>
-        <h1>Don’t miss that glyph again.</h1>
+        <h1>
+          Don’t miss that glyph again.
+        </h1>
+        <p class="large">
+          Glyphfinder is the missing character search for designers, developers and writers.
+        </p>
       </banner>
+    </app-section>
+    <app-section>
+      <h2>
+        30.000+ Characters
+      </h2>
     </app-section>
   </Layout>
 </template>
