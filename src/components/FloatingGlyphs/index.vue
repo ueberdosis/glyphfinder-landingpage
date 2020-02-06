@@ -77,12 +77,12 @@ export default {
         }
       })
 
-      const count = Math.floor((this.width * this.height) / 35000)
+      const count = Math.floor((this.width * this.height) / 40000)
 
       for (let i = 0; i < count; i++) {
         const image = collect(this.images).random()
         const spriteSize = image.width
-        const size = Common.random(50, 150)
+        const size = Common.random(80, 150)
         const body = Bodies.rectangle(
           Common.random(0, this.render.options.width), 
           Common.random(0, this.render.options.height),
