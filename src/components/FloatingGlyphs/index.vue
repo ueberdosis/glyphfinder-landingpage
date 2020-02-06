@@ -22,6 +22,20 @@ let Engine = Matter.Engine,
   MouseConstraint = Matter.MouseConstraint;
 
 export default {
+  data() {
+    return {
+      width: null,
+      height: null,
+    }
+  },
+
+  watch: {
+    width(newWidth, oldWidth) {
+      this.reset()
+      this.init()
+    }
+  },
+
   methods: {
     init() {
       this.engine = Engine.create()
@@ -34,8 +48,8 @@ export default {
           wireframes: false,
           background: 'transparent',
           pixelRatio: 'auto',
-          width: this.$el.clientWidth,
-          height: this.$el.clientHeight,
+          width: this.width,
+          height: this.height,
           showDebug: false,
           showBroadphase: false,
           showBounds: false,
@@ -99,15 +113,29 @@ export default {
       Engine.run(this.engine)
       Render.run(this.render)
     },
+
+    setDimensions() {
+      this.width = this.$el.clientWidth
+      this.height = this.$el.clientHeight
+    },
+
+    reset() {
+      if (this.engine) {
+        this.$el.innerHTML = ''
+        World.clear(this.engine.world)
+        Engine.clear(this.engine)
+      }
+    },
   },
 
   mounted() {
-    this.init()
+    window.addEventListener('resize', this.setDimensions)
+    this.setDimensions()
   },
 
   beforeDestroy() {
-    World.clear(this.engine.world)
-    Engine.clear(this.engine)
+    window.removeEventListener('resize', this.setDimensions)
+    this.reset()
   }
 }
 </script>
