@@ -77,21 +77,26 @@ export default {
         }
       })
 
-      const count = Math.floor((this.width * this.height) / 40000)
+      const count = Math.floor((this.width * this.height) / 9000)
+      const canvasStartX = -this.width * 0.5
+      const canvasStartY = -this.height * 0.5
+      const canvasEndX = this.width * 1.5
+      const canvasEndY = this.height * 1.5
 
       for (let i = 0; i < count; i++) {
         const image = collect(this.images).random()
         const spriteSize = image.width
         const size = Common.random(80, 150)
         const body = Bodies.rectangle(
-          Common.random(0, this.render.options.width), 
-          Common.random(0, this.render.options.height),
+          Common.random(canvasStartX, canvasEndX), 
+          Common.random(canvasStartY, canvasEndY),
           size,
           size,
           { 
             friction: 0,
             frictionAir: 0,
             restitution: 1.05,
+            // rotation: 45,
             render: {
               fillStyle: '#F25D48',
               sprite: {
@@ -103,12 +108,12 @@ export default {
             plugin: {
               wrap: {
                 min: {
-                  x: 0,
-                  y: 0,
+                  x: canvasStartX,
+                  y: canvasStartY,
                 },
                 max: {
-                  x: this.render.canvas.width,
-                  y: this.render.canvas.height,
+                  x: canvasEndX,
+                  y: canvasEndY,
                 },
               },
             },
@@ -116,9 +121,11 @@ export default {
         )
 
         Body.setVelocity(body, {
-          x: Common.random(-3, 3) + 3, 
-          y: Common.random(-3, 3) + 3,
+          x: Common.random(-2, 2) + 2, 
+          y: Common.random(-2, 2) + 2,
         })
+
+        Body.rotate(body, Common.random(0, 360))
 
         World.add(this.engine.world, body)
       }
