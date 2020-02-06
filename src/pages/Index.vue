@@ -3,7 +3,7 @@
     <app-section color="red" width="full">
       <banner>
         <h1>
-          Don’t miss that glyph again.
+          Find the unicorn in the unicode
         </h1>
         <p class="large">
           Glyphfinder is the missing character search for designers, developers and writers.
