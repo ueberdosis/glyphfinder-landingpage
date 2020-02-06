@@ -6,6 +6,7 @@
 import collect from 'collect.js'
 import Matter from 'matter-js'
 import MatterWrap from 'matter-wrap'
+import { scaleLinear } from 'd3-scale'
 
 Matter.use(MatterWrap)
 
@@ -82,11 +83,15 @@ export default {
       const canvasStartY = -this.height * 0.5
       const canvasEndX = this.width * 1.5
       const canvasEndY = this.height * 1.5
+      const baseSize = scaleLinear()
+        .domain([400, 1200])
+        .range([50, 80])
+        .clamp(true)(window.innerWidth)
 
       for (let i = 0; i < count; i++) {
         const image = collect(this.images).random()
         const spriteSize = image.width
-        const size = Common.random(80, 150)
+        const size = Common.random(baseSize, baseSize * 1.8)
         const body = Bodies.rectangle(
           Common.random(canvasStartX, canvasEndX), 
           Common.random(canvasStartY, canvasEndY),

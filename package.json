@@ -10,6 +10,7 @@
     "@gridsome/plugin-sitemap": "^0.2.3",
     "axios": "^0.19.2",
     "collect.js": "^4.20.3",
+    "d3-scale": "^3.2.1",
     "gridilydidily": "^3.0.1",
     "gridsome": "^0.7.0",
     "load-asset": "^1.2.0",
