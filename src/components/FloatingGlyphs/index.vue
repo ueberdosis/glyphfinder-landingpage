@@ -39,7 +39,8 @@ export default {
   methods: {
     init() {
       this.engine = Engine.create()
-      this.engine.world.gravity.scale = 0
+      this.engine.world.gravity.x = 0
+      this.engine.world.gravity.y = 0
 
       this.render = Render.create({
         element: this.$el,
@@ -68,9 +69,11 @@ export default {
         }
       })
 
-      for (let i = 0; i < 50; i++) {
+      const count = Math.floor((this.width * this.height) / 40000)
+
+      for (let i = 0; i < count; i++) {
         const spriteSize = 300
-        const size = 100
+        const size = Common.random(50, 150)
         const body = Bodies.rectangle(
           Common.random(-this.render.options.width, this.render.options.width), 
           Common.random(-this.render.options.height, this.render.options.height),
@@ -79,6 +82,7 @@ export default {
           { 
             friction: 0,
             frictionAir: 0,
+            restitution: 1,
             render: {
               fillStyle: '#F25D48',
               sprite: {
