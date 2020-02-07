@@ -14,7 +14,7 @@
         </client-only>
       </app-section>
 
-      <app-section color="red" clip-top clip-bottom>
+      <app-section color="red">
         <!-- <banner> -->
         <h1>
           Find the unicorn in the unicode

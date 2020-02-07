@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <app-section color="red" clip-bottom>
+    <app-section color="red" :clip-top="false">
       <template v-slot:background>
         <floating-glyphs :images="images" v-if="images.length" />
       </template>
@@ -22,7 +22,7 @@
       </h2>
     </app-section>
 
-    <app-section color="deep-black" clip-top>
+    <app-section color="deep-black">
       <h2>
         small features
       </h2>

@@ -1,5 +1,5 @@
 <template>
-  <section :class="['app-section', `app-section--${color}`, `app-section--${width}`]">
+  <section :class="['app-section', `app-section--${color}`, `app-section--${width}`]" :style="style">
     <div class="app-section__background">
       <slot name="background" />
     </div>
@@ -23,12 +23,12 @@ export default {
     },
 
     clipTop: {
-      default: false,
+      default: true,
       type: Boolean,
     },
 
     clipBottom: {
-      default: false,
+      default: true,
       type: Boolean,
     },
   },
@@ -36,7 +36,19 @@ export default {
   data() {
     return {
       clip: 'none',
+      clipOffset: 0,
     }
+  },
+
+  computed: {
+    style() {
+      return `
+        clip-path: polygon(0 ${this.clipTop ? this.clipOffset : 0}px, 100% 0%, 100% calc(100% - ${this.clipBottom ? this.clipOffset : 0}px), 0% 100%);
+        margin-top: -${this.clipTop ? this.clipOffset : 0}px;
+        padding-top: ${this.clipOffset / 2}px;
+        padding-bottom: ${this.clipOffset / 2}px;
+        `
+    },
   },
 
   methods: {
@@ -44,22 +56,13 @@ export default {
       return degree * (Math.PI / 180)
     },
 
-    getClipPercentage() {
-      const degree = 6
+    setClip() {
+      const degree = 4
       const c = window.innerWidth
       const b = (c * Math.sin(this.degreeToRadian(90))) / Math.sin(this.degreeToRadian(90 - degree))
       const a = Math.sqrt((b ** 2) - 2 * b * c * Math.cos(this.degreeToRadian(degree)) + (c ** 2))
-      const height = this.$el.offsetHeight
-      const percentage = (100 / height) * a
 
-      return percentage
-    },
-
-    setClip() {
-      const percentage = this.getClipPercentage()
-      const bottonPercentage = 100 - percentage
-
-      this.clip = `clip-path: polygon(0 ${this.clipTop ? percentage : 0}%, 100% 0%, 100% ${this.clipBottom ? bottonPercentage : 100}%, 0% 100%)`
+      this.clipOffset = a
     },
 
     handleResize() {
