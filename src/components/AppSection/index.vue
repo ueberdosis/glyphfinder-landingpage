@@ -1,5 +1,8 @@
 <template>
-  <section :class="['app-section', `app-section--${color}`, `app-section--${width}`]" :style="style">
+  <section
+    :class="['app-section', `app-section--${color}`, `app-section--${width}`]"
+    :style="style"
+  >
     <div class="app-section__background">
       <slot name="background" />
     </div>
