@@ -15,15 +15,11 @@
     </app-section>
 
     <app-section color="black">
-      <h2>
-        large features
-      </h2>
+      large features
     </app-section>
 
     <app-section color="deep-black">
-      <h2>
-        small features
-      </h2>
+      small features
     </app-section>
   </Layout>
 </template>
