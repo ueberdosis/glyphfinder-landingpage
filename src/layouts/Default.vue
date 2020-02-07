@@ -18,14 +18,12 @@
         <template v-slot:background>
           <floating-glyphs />
         </template>
-        <template v-slot:default>
-          <h1>
-            Find the unicorn in the unicode
-          </h1>
-          <p class="large">
-            Glyphfinder is the missing character search for designers, developers and writers.
-          </p>
-        </template>
+        <h1>
+          Find the unicorn in the unicode
+        </h1>
+        <p class="large">
+          Glyphfinder is the missing character search for designers, developers and writers.
+        </p>
       </app-section>
 
       <app-section :clip-bottom="false">
