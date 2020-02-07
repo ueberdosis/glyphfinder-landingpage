@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import scrollMonitor from 'scrollmonitor'
 import load from 'load-asset'
 import collect from 'collect.js'
 import Matter from 'matter-js'
@@ -25,15 +26,20 @@ export default {
   data() {
     return {
       images: [],
+      view: null,
       width: null,
       height: null,
     }
   },
 
   watch: {
-    width() {
-      this.reset()
-      this.init()
+    width(newValue, oldValue) {
+      if (oldValue === null) {
+        return
+      }
+
+      this.stop()
+      this.start()
     },
   },
 
@@ -49,7 +55,7 @@ export default {
       return image
     },
 
-    init() {
+    start() {
       this.engine = Engine.create()
       this.engine.world.gravity.x = 0
       this.engine.world.gravity.y = 0
@@ -129,8 +135,6 @@ export default {
         )
 
         Body.setVelocity(body, {
-          // x: Common.random(-2, 2) + 2,
-          // y: Common.random(-2, 2) + 2,
           x: Common.random(-3, 3),
           y: Common.random(-3, 3),
         })
@@ -149,16 +153,30 @@ export default {
       this.height = this.$el.clientHeight
     },
 
-    reset() {
+    stop() {
+      this.$el.innerHTML = ''
+
       if (this.engine) {
-        this.$el.innerHTML = ''
         World.clear(this.engine.world)
         Engine.clear(this.engine)
       }
     },
+
+    init() {
+      window.addEventListener('resize', this.setDimensions)
+      this.setDimensions()
+      this.start()
+    },
+
+    destroy() {
+      window.removeEventListener('resize', this.setDimensions)
+      this.stop()
+    },
   },
 
   mounted() {
+    this.view = scrollMonitor.create(this.$el, { top: 50, bottom: 50 })
+
     load(sprite)
       .then(image => {
         const canvas = document.createElement('canvas')
@@ -182,15 +200,17 @@ export default {
         }
 
         this.images = images
-
-        window.addEventListener('resize', this.setDimensions)
-        this.setDimensions()
+        this.view.enterViewport(this.init)
+        this.view.exitViewport(this.destroy)
       })
   },
 
   beforeDestroy() {
-    window.removeEventListener('resize', this.setDimensions)
-    this.reset()
+    this.destroy()
+
+    if (this.view) {
+      this.view.destroy()
+    }
   },
 }
 </script>
