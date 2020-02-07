@@ -6,10 +6,21 @@
     <main class="app__content">
       <slot/>
 
-      <app-section>
+      <app-section color="deep-black">
         <client-only>
           <testimonials />
         </client-only>
+      </app-section>
+
+      <app-section color="red" clip-top clip-bottom>
+        <!-- <banner> -->
+          <h1>
+            Find the unicorn in the unicode
+          </h1>
+          <p class="large">
+            Glyphfinder is the missing character search for designers, developers and writers.
+          </p>
+        <!-- </banner> -->
       </app-section>
 
       <app-section>

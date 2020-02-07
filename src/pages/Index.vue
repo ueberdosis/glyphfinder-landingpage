@@ -12,21 +12,16 @@
       </banner>
     </app-section>
 
-    <app-section>
+    <app-section color="black">
       <h2>
-        30.000+ Characters
+        large features
       </h2>
     </app-section>
 
-    <app-section color="red" clip-top clip-bottom>
-      <!-- <banner> -->
-        <h1>
-          Find the unicorn in the unicode
-        </h1>
-        <p class="large">
-          Glyphfinder is the missing character search for designers, developers and writers.
-        </p>
-      <!-- </banner> -->
+    <app-section color="deep-black">
+      <h2>
+        small features
+      </h2>
     </app-section>
 
   </Layout>

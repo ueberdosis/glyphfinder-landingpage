@@ -15,6 +15,20 @@
     }
   }
 
+  &--deep-black {
+    background-color: $colorDeepBlack;
+    color: rgba($colorWhite, 0.5);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $colorWhite;
+    }
+  }
+
   &--red {
     background-color: $colorRed;
     color: rgba($colorBlack, 0.5);
@@ -65,7 +79,9 @@
   // }
 
   *:not(main) > &:first-child &__inner,
-  &--black + &--black &__inner {
+  &--black + &--black &__inner,
+  &--red + &--red &__inner,
+  &--deep-black + &--deep-black &__inner {
     padding-top: 0;
   }
 }
