@@ -2,9 +2,59 @@
   <div class="app">
     <header class="app__header">
     </header>
+
     <main class="app__content">
       <slot/>
+
+      <app-section>
+        <client-only>
+          <testimonials />
+        </client-only>
+      </app-section>
+
+      <app-section>
+        <h2>
+          FAQ
+        </h2>
+        <grid :options="{ medium: 'wide'}">
+          <grid-item :options="{ medium: '6/12'}">
+            <accordion title="Do you offer a trial?">
+              <p>
+                We didn’t implement a trial yet, but no worries—feel free to purchase the app. If it’s not for you send a short message. We’ll refund your order.
+              </p>
+            </accordion>
+            <accordion title="Does Glyphfinder have all the unicode characters in the world?">
+              <p>
+                …
+              </p>
+            </accordion>
+            <accordion title="Why is it better than the macOS character viewer?">
+              <p>
+                …
+              </p>
+            </accordion>
+          </grid-item>
+          <grid-item :options="{ medium: '6/12'}">
+            <accordion title="Is Glyphfinder available for Linux?">
+              <p>
+                Nope, not for now. But give us a shout and we’ll consider it.
+              </p>
+            </accordion>
+            <accordion title="Something’s wrong. How do I get in touch?">
+              <p>
+                <a href="mailto:support@glyphfnder.com">Drop us a line</a>, we’ll be happy to help!
+              </p>
+            </accordion>
+          </grid-item>
+        </grid>
+      </app-section>
     </main>
+
+    <footer class="app__footer">
+      <app-section>
+        <app-footer />
+      </app-section>
+    </footer>
   </div>
 </template>
 
@@ -15,6 +65,25 @@ query {
   }
 }
 </static-query>
+
+<script>
+import AppSection from '@/components/AppSection'
+import AppFooter from '@/components/AppFooter'
+import Accordion from '@/components/Accordion'
+import Testimonials from '@/components/Testimonials'
+import { Grid, GridItem } from '@/components/Grid'
+
+export default {
+  components: {
+    AppSection,
+    AppFooter,
+    Accordion,
+    Testimonials,
+    Grid,
+    GridItem,
+  }
+}
+</script>
 
 <style lang="scss" src="./fonts.scss"></style>
 <style lang="scss" src="./base.scss"></style>

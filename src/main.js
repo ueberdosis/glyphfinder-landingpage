@@ -4,6 +4,15 @@
 import DefaultLayout from '~/layouts/Default.vue'
 
 export default function (Vue, { router, head, isClient }) {
-  // Set default layout as a global component
+
+  Vue.mixin({
+    data() {
+      return {
+        downloadLink: 'https://ueber.fra1.cdn.digitaloceanspaces.com/mouseless/mac/Mouseless-1.2.4-mac.dmg',
+        gumroadLink: 'https://gum.co/Dwka',
+      }
+    },
+  })
+
   Vue.component('Layout', DefaultLayout)
 }

@@ -64,9 +64,8 @@
   //   }
   // }
 
-  // *:not(main) > &:first-child &__inner,
-  // &--black + &--black &__inner,
-  // &.has-wave &__inner {
-  //   padding-top: 0;
-  // }
+  *:not(main) > &:first-child &__inner,
+  &--black + &--black &__inner {
+    padding-top: 0;
+  }
 }
