@@ -42,8 +42,11 @@ export default {
 
   computed: {
     style() {
+      const clipPath = `polygon(0 ${this.clipTop ? this.clipOffset : 0}px, 100% 0%, 100% calc(100% - ${this.clipBottom ? this.clipOffset : 0}px), 0% 100%)`
+
       return `
-        clip-path: polygon(0 ${this.clipTop ? this.clipOffset : 0}px, 100% 0%, 100% calc(100% - ${this.clipBottom ? this.clipOffset : 0}px), 0% 100%);
+        -webkit-clip-path: ${clipPath};
+        clip-path: ${clipPath};
         margin-top: -${this.clipTop ? this.clipOffset : 0}px;
         padding-top: ${this.clipOffset / 2}px;
         padding-bottom: ${this.clipOffset / 2}px;
