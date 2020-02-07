@@ -4,7 +4,7 @@
       <template v-slot:background>
         <floating-glyphs />
       </template>
-      <h1>
+      <h1 class="huge">
         Find the unicorn in the unicode
       </h1>
       <p class="large">

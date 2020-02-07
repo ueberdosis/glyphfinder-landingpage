@@ -18,9 +18,9 @@
         <template v-slot:background>
           <floating-glyphs />
         </template>
-        <h1>
+        <h2 class="huge">
           Find the unicorn in the unicode
-        </h1>
+        </h2>
         <p class="large">
           Glyphfinder is the missing character search for designers, developers and writers.
         </p>
