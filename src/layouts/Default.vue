@@ -28,7 +28,7 @@
         </template>
       </app-section>
 
-      <app-section>
+      <app-section :clip-bottom="false">
         <h2>
           FAQ
         </h2>
@@ -67,7 +67,7 @@
     </main>
 
     <footer class="app__footer">
-      <app-section>
+      <app-section :clip-top="false" :clip-bottom="false">
         <app-footer />
       </app-section>
     </footer>

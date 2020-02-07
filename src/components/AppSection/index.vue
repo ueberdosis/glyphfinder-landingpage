@@ -51,8 +51,8 @@ export default {
         -webkit-clip-path: ${clipPath};
         clip-path: ${clipPath};
         margin-top: -${this.clipTop ? this.clipOffset : 0}px;
-        padding-top: ${this.clipOffset / 2}px;
-        padding-bottom: ${this.clipOffset / 2}px;
+        padding-top: ${this.clipTop ? (this.clipOffset / 2) : 0}px;
+        padding-bottom: ${this.clipBottom ? (this.clipOffset / 2) : 0}px;
         `
     },
   },
