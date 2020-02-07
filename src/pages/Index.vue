@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <app-section color="red" width="full">
+    <app-section color="red" width="full" clip-bottom>
       <banner>
         <h1>
           Find the unicorn in the unicode
@@ -15,6 +15,16 @@
         30.000+ Characters
       </h2>
     </app-section>
+    <!-- <app-section color="red" width="full" clip-top clip-bottom>
+      <banner>
+        <h1>
+          Find the unicorn in the unicode
+        </h1>
+        <p class="large">
+          Glyphfinder is the missing character search for designers, developers and writers.
+        </p>
+      </banner>
+    </app-section> -->
   </Layout>
 </template>
 
