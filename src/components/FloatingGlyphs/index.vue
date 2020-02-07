@@ -171,14 +171,13 @@ export default {
         const tileHeight = 300
         const tilesX = image.width / tileWidth
         const tilesY = image.height / tileHeight
-        const totalTiles = tilesX * tilesY
         const images = []
 
-        for (let i = 0; i < tilesY; i++) {
-          for (let j = 0; j < tilesX; j++) {
+        for (let i = 0; i < tilesY; i += 1) {
+          for (let j = 0; j < tilesX; j += 1) {
             const imageData = ctx.getImageData(j * tileWidth, i * tileHeight, tileWidth, tileHeight)
-            const image = this.imageDataToImage(imageData)
-            images.push(image)
+            const tile = this.imageDataToImage(imageData)
+            images.push(tile)
           }
         }
 
