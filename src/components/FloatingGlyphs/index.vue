@@ -3,10 +3,12 @@
 </template>
 
 <script>
+import load from 'load-asset'
 import collect from 'collect.js'
 import Matter from 'matter-js'
 import MatterWrap from 'matter-wrap'
 import { scaleLinear } from 'd3-scale'
+import sprite from './sprite.png'
 
 Matter.use(MatterWrap)
 
@@ -20,15 +22,9 @@ const {
 } = Matter
 
 export default {
-  props: {
-    images: {
-      default: () => ([]),
-      type: Array,
-    },
-  },
-
   data() {
     return {
+      images: [],
       width: null,
       height: null,
     }
@@ -42,6 +38,17 @@ export default {
   },
 
   methods: {
+    imageDataToImage(imagedata) {
+      const canvas = document.createElement('canvas')
+      const ctx = canvas.getContext('2d')
+      canvas.width = imagedata.width
+      canvas.height = imagedata.height
+      ctx.putImageData(imagedata, 0, 0)
+      const image = new Image()
+      image.src = canvas.toDataURL()
+      return image
+    },
+
     init() {
       this.engine = Engine.create()
       this.engine.world.gravity.x = 0
@@ -152,8 +159,34 @@ export default {
   },
 
   mounted() {
-    window.addEventListener('resize', this.setDimensions)
-    this.setDimensions()
+    load(sprite)
+      .then(image => {
+        const canvas = document.createElement('canvas')
+        const ctx = canvas.getContext('2d')
+        canvas.width = image.width
+        canvas.height = image.height
+        ctx.drawImage(image, 0, 0)
+
+        const tileWidth = 300
+        const tileHeight = 300
+        const tilesX = image.width / tileWidth
+        const tilesY = image.height / tileHeight
+        const totalTiles = tilesX * tilesY
+        const images = []
+
+        for (let i = 0; i < tilesY; i++) {
+          for (let j = 0; j < tilesX; j++) {
+            const imageData = ctx.getImageData(j * tileWidth, i * tileHeight, tileWidth, tileHeight)
+            const image = this.imageDataToImage(imageData)
+            images.push(image)
+          }
+        }
+
+        this.images = images
+
+        window.addEventListener('resize', this.setDimensions)
+        this.setDimensions()
+      })
   },
 
   beforeDestroy() {

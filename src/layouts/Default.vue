@@ -15,14 +15,17 @@
       </app-section>
 
       <app-section color="red">
-        <!-- <banner> -->
-        <h1>
-          Find the unicorn in the unicode
-        </h1>
-        <p class="large">
-          Glyphfinder is the missing character search for designers, developers and writers.
-        </p>
-        <!-- </banner> -->
+        <template v-slot:background>
+          <floating-glyphs />
+        </template>
+        <template v-slot:default>
+          <h1>
+            Find the unicorn in the unicode
+          </h1>
+          <p class="large">
+            Glyphfinder is the missing character search for designers, developers and writers.
+          </p>
+        </template>
       </app-section>
 
       <app-section>
@@ -86,6 +89,7 @@ import AppSection from '@/components/AppSection'
 import AppFooter from '@/components/AppFooter'
 import Accordion from '@/components/Accordion'
 import Testimonials from '@/components/Testimonials'
+import FloatingGlyphs from '@/components/FloatingGlyphs'
 import { Grid, GridItem } from '@/components/Grid'
 
 export default {
@@ -103,6 +107,7 @@ export default {
     AppFooter,
     Accordion,
     Testimonials,
+    FloatingGlyphs,
     Grid,
     GridItem,
   },
