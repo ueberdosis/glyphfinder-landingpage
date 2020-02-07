@@ -41,7 +41,7 @@ export default {
 
   methods: {
     degreeToRadian(degree) {
-      return degree * (Math.PI/180)
+      return degree * (Math.PI / 180)
     },
 
     getClipPercentage() {

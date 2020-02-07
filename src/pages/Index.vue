@@ -1,6 +1,5 @@
 <template>
   <Layout>
-
     <app-section color="red" width="full" clip-bottom>
       <banner>
         <h1>
@@ -23,7 +22,6 @@
         small features
       </h2>
     </app-section>
-
   </Layout>
 </template>
 

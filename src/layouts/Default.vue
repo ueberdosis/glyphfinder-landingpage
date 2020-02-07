@@ -1,10 +1,9 @@
 <template>
   <div class="app">
-    <header class="app__header">
-    </header>
+    <header class="app__header" />
 
     <main class="app__content">
-      <slot/>
+      <slot />
 
       <app-section color="deep-black">
         <client-only>
@@ -14,12 +13,12 @@
 
       <app-section color="red" clip-top clip-bottom>
         <!-- <banner> -->
-          <h1>
-            Find the unicorn in the unicode
-          </h1>
-          <p class="large">
-            Glyphfinder is the missing character search for designers, developers and writers.
-          </p>
+        <h1>
+          Find the unicorn in the unicode
+        </h1>
+        <p class="large">
+          Glyphfinder is the missing character search for designers, developers and writers.
+        </p>
         <!-- </banner> -->
       </app-section>
 
@@ -92,7 +91,7 @@ export default {
     Testimonials,
     Grid,
     GridItem,
-  }
+  },
 }
 </script>
 

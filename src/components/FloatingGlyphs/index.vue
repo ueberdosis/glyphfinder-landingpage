@@ -1,34 +1,30 @@
 <template>
-  <div class="c-floating-glyphs"></div>
+  <div class="c-floating-glyphs" />
 </template>
 
 <script>
 import collect from 'collect.js'
 import Matter from 'matter-js'
 import MatterWrap from 'matter-wrap'
-import { scaleLinear } from 'd3-scale'
+import { scaleLinear } from 'd3-scale'
 
 Matter.use(MatterWrap)
 
-let Engine = Matter.Engine,
-  Render = Matter.Render,
-  World = Matter.World,
-  Mouse = Matter.Mouse,
-  Body = Matter.Body,
-  Bodies = Matter.Bodies,
-  Common = Matter.Common,
-  Vertices = Matter.Vertices,
-  Svg = Matter.Svg,
-  Constraint = Matter.Constraint,
-  Composites = Matter.Composites,
-  MouseConstraint = Matter.MouseConstraint;
+const {
+  Engine,
+  Render,
+  World,
+  Body,
+  Bodies,
+  Common,
+} = Matter
 
 export default {
   props: {
     images: {
       default: () => ([]),
       type: Array,
-    }
+    },
   },
 
   data() {
@@ -39,10 +35,10 @@ export default {
   },
 
   watch: {
-    width(newWidth, oldWidth) {
+    width() {
       this.reset()
       this.init()
-    }
+    },
   },
 
   methods: {
@@ -74,8 +70,8 @@ export default {
           showVertexNumbers: false,
           showConvexHulls: false,
           showInternalEdges: false,
-          showMousePosition: false
-        }
+          showMousePosition: false,
+        },
       })
 
       const count = Math.floor((this.width * this.height) / 9000)
@@ -88,16 +84,16 @@ export default {
         .range([50, 80])
         .clamp(true)(window.innerWidth)
 
-      for (let i = 0; i < count; i++) {
+      for (let i = 0; i < count; i += 1) {
         const image = collect(this.images).random()
         const spriteSize = image.width
         const size = Common.random(baseSize, baseSize * 1.8)
         const body = Bodies.rectangle(
-          Common.random(canvasStartX, canvasEndX), 
+          Common.random(canvasStartX, canvasEndX),
           Common.random(canvasStartY, canvasEndY),
           size,
           size,
-          { 
+          {
             friction: 0,
             frictionAir: 0,
             restitution: 1.05,
@@ -126,9 +122,9 @@ export default {
         )
 
         Body.setVelocity(body, {
-          // x: Common.random(-2, 2) + 2, 
+          // x: Common.random(-2, 2) + 2,
           // y: Common.random(-2, 2) + 2,
-          x: Common.random(-3, 3), 
+          x: Common.random(-3, 3),
           y: Common.random(-3, 3),
         })
 
@@ -163,7 +159,7 @@ export default {
   beforeDestroy() {
     window.removeEventListener('resize', this.setDimensions)
     this.reset()
-  }
+  },
 }
 </script>
 
