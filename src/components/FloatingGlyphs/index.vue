@@ -101,6 +101,7 @@ export default {
             friction: 0,
             frictionAir: 0,
             restitution: 1.05,
+            slop: 0,
             render: {
               fillStyle: '#F25D48',
               sprite: {
