@@ -175,6 +175,10 @@ export default {
   },
 
   mounted() {
+    if (this.reducedMotion) {
+      return
+    }
+
     this.view = scrollMonitor.create(this.$el, { top: 50, bottom: 50 })
 
     load(sprite)
