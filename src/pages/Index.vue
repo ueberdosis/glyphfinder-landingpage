@@ -17,7 +17,7 @@
       </h2>
     </app-section>
 
-    <app-section color="deep-black">
+    <app-section color="deep-black" clip-top>
       <h2>
         small features
       </h2>

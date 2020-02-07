@@ -48,9 +48,9 @@ export default {
       const degree = 6
       const c = window.innerWidth
       const b = (c * Math.sin(this.degreeToRadian(90))) / Math.sin(this.degreeToRadian(90 - degree))
-      const a = Math.sqrt(Math.pow(b, 2) - 2 * b * c * Math.cos(this.degreeToRadian(degree)) + Math.pow(c, 2))
+      const a = Math.sqrt((b ** 2) - 2 * b * c * Math.cos(this.degreeToRadian(degree)) + (c ** 2))
       const height = this.$el.offsetHeight
-      const percentage = 100 / height * a
+      const percentage = (100 / height) * a
 
       return percentage
     },
