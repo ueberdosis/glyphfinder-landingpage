@@ -1,8 +1,8 @@
 <template>
-  <section
-    :class="['app-section', `app-section--${color}`, `app-section--${width}`]"
-    :style="clip"
-  >
+  <section :class="['app-section', `app-section--${color}`, `app-section--${width}`]">
+    <div class="app-section__background">
+      <slot name="background" />
+    </div>
     <div class="app-section__inner">
       <slot />
     </div>
