@@ -1,0 +1,36 @@
+.product-hunt-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorBlack;
+  color: $colorRed;
+  text-decoration: none;
+  padding: 0.8rem;
+
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+
+    @media screen and (min-width: 700px) {
+      margin-bottom: 0;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &__button {
+    flex: 0 0 auto;
+    background-color: $colorRed;
+    color: $colorBlack;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: opacity 0.2s $ease;
+  }
+}

@@ -1,6 +1,9 @@
 <template>
   <div class="app">
-    <header class="app__header" />
+    <product-hunt-bar />
+    <header class="app__header">
+      <navigation :theme="navigationTheme" />
+    </header>
 
     <main class="app__content">
       <slot />
@@ -77,6 +80,8 @@ query {
 </static-query>
 
 <script>
+import ProductHuntBar from '@/components/ProductHuntBar'
+import Navigation from '@/components/Navigation'
 import AppSection from '@/components/AppSection'
 import AppFooter from '@/components/AppFooter'
 import Accordion from '@/components/Accordion'
@@ -84,7 +89,16 @@ import Testimonials from '@/components/Testimonials'
 import { Grid, GridItem } from '@/components/Grid'
 
 export default {
+  props: {
+    navigationTheme: {
+      default: 'dark',
+      type: String,
+    },
+  },
+
   components: {
+    ProductHuntBar,
+    Navigation,
     AppSection,
     AppFooter,
     Accordion,

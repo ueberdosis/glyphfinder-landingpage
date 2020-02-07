@@ -1,0 +1,83 @@
+.navigation {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: $colorBlack;
+
+  &--bright {
+    color: $colorWhite;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 66rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+
+    @media screen and (min-width: 700px) {
+      padding: 2rem 3rem;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__icon {
+    width: 3rem;
+    height: auto;
+  }
+
+  &__name {
+    display: none;
+    
+    @media screen and (min-width: 700px) {
+      display: block;
+      width: 6.75rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    @media screen and (min-width: 700px) {
+      margin-left: 1rem;
+    }
+  }
+
+  &__link {
+    padding: 0.4rem;
+    border-radius: 9px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    @media screen and (min-width: 700px) {
+      padding: 0.4rem 0.6rem;
+      font-size: 1.15rem;
+    }
+
+    &:hover {
+      background-color: rgba($colorBlack, 0.05)
+    }
+
+    .icon {
+      @media not screen and (min-width: 700px) {
+        display: none;
+      }
+    }
+  }
+
+  &--bright &__link:hover {
+    background-color: rgba($colorWhite, 0.05)
+  }
+}
