@@ -8,7 +8,7 @@
         </a>
       </h2>
       <p>
-        Take our word for it or see what others are saying:
+        It’s not just us being hyped about it. See what all those lovely Glyphfinder users are saying:
       </p>
     </div>
     <slider>
