@@ -32,7 +32,7 @@
               <ul>
                 <li>
                   <a href="https://floatie.app/glyphfinder" target="_blank">
-                    Public Metrics
+                    Open Startup
                   </a>
                 </li>
                 <li>
