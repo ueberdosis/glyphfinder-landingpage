@@ -8,7 +8,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.mixin({
     data() {
       return {
-        reducedMotion: !!window.matchMedia('(prefers-reduced-motion)').matches,
+        reducedMotion: process.isClient ? !!window.matchMedia('(prefers-reduced-motion)').matches : false,
         downloadLink: 'https://ueber.fra1.cdn.digitaloceanspaces.com/mouseless/mac/Mouseless-1.2.4-mac.dmg',
         gumroadLink: 'https://gum.co/Dwka',
       }
