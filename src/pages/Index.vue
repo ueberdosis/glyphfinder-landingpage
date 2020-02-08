@@ -5,7 +5,7 @@
         <floating-glyphs />
       </template>
       <h1 class="huge">
-        Find the unicorn in the unicode
+        Every fucking glyph at your fingertips
       </h1>
       <p class="large">
         Glyphfinder is the missing character search for designers, developers and writers.
