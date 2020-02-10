@@ -77,9 +77,8 @@
     }
   }
 
-  &--full &__inner {
-    padding: 0;
-    max-width: none;
+  &.is-narrow &__inner {
+    max-width: 55rem;
   }
 
   main > &:first-child &__inner {

@@ -54,27 +54,6 @@ body {
   overflow-y: auto;
 }
 
-p {
-  margin: 1rem 0;
-}
-
-small,
-.small {
-  display: block;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.large {
-  font-size: 1.8rem;
-}
-
-.huge {
-  font-size: 100px;
-  font-weight: 900;
-  line-height: 1.05;
-}
-
 a {
   color: inherit;
   transition: color 0.2s $ease, background-color 0.2s $ease;
@@ -148,6 +127,33 @@ h5,
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+p {
+  margin: 1em 0;
+}
+
+small,
+.small {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.large {
+  @media screen and (min-width: 700px) {
+    font-size: 1.8rem;
+  }
+}
+
+.huge {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+
+  @media screen and (min-width: 700px) {
+    font-size: 6rem;
   }
 }
 

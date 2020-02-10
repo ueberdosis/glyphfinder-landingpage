@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <app-section color="red" :clip-top="false">
+    <app-section color="red" :clip-top="false" narrow>
       <template v-slot:background>
         <floating-glyphs />
       </template>

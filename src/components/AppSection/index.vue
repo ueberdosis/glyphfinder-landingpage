@@ -1,6 +1,6 @@
 <template>
   <section
-    :class="['app-section', `app-section--${color}`, `app-section--${width}`]"
+    :class="['app-section', `app-section--${color}`, { 'is-narrow': narrow }]"
     :style="style"
   >
     <div class="app-section__background">
@@ -20,9 +20,9 @@ export default {
       type: String,
     },
 
-    width: {
-      default: 'normal',
-      type: String,
+    narrow: {
+      default: false,
+      type: Boolean,
     },
 
     clipTop: {

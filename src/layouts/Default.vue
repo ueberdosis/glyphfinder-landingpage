@@ -14,7 +14,7 @@
         </client-only>
       </app-section>
 
-      <app-section color="red">
+      <app-section color="red" narrow>
         <template v-slot:background>
           <floating-glyphs />
         </template>
