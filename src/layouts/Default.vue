@@ -24,6 +24,9 @@
         <p class="large">
           Glyphfinder is the missing character search for designers, developers and writers.
         </p>
+        <btn>
+          Get it now
+        </btn>
       </app-section>
 
       <app-section :clip-bottom="false">
@@ -95,6 +98,7 @@ query {
 </static-query>
 
 <script>
+import Btn from '@/components/Btn'
 import ProductHuntBar from '@/components/ProductHuntBar'
 import Navigation from '@/components/Navigation'
 import AppSection from '@/components/AppSection'
@@ -113,6 +117,7 @@ export default {
   },
 
   components: {
+    Btn,
     ProductHuntBar,
     Navigation,
     AppSection,

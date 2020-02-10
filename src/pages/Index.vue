@@ -10,6 +10,9 @@
       <p class="large">
         Glyphfinder is the missing character search for designers, developers and writers.
       </p>
+      <btn>
+        Get it now
+      </btn>
     </app-section>
 
     <app-section color="black">
@@ -23,11 +26,13 @@
 </template>
 
 <script>
+import Btn from '@/components/Btn'
 import AppSection from '@/components/AppSection'
 import FloatingGlyphs from '@/components/FloatingGlyphs'
 
 export default {
   components: {
+    Btn,
     AppSection,
     FloatingGlyphs,
   },
