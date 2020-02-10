@@ -81,12 +81,7 @@ export default {
     },
 
     setClip() {
-      const degree = 4
-      const c = window.innerWidth
-      const b = (c * Math.sin(this.degreeToRadian(90))) / Math.sin(this.degreeToRadian(90 - degree))
-      const a = Math.sqrt((b ** 2) - 2 * b * c * Math.cos(this.degreeToRadian(degree)) + (c ** 2))
-
-      this.clipOffset = a
+      this.clipOffset = Math.tan(this.degreeToRadian(4)) * window.innerWidth
     },
 
     handleResize() {
