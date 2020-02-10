@@ -160,6 +160,7 @@ export default {
       this.$el.innerHTML = ''
 
       if (this.engine) {
+        this.engine.events = {}
         World.clear(this.engine.world)
         Engine.clear(this.engine)
       }
