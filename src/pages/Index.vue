@@ -15,7 +15,7 @@
       </btn>
     </app-section>
 
-    <app-section color="black">
+    <app-section color="black" overlap>
       <split>
         <template v-slot:text>
           <h2>

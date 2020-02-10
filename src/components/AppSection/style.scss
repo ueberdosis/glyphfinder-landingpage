@@ -69,11 +69,17 @@
     position: relative;
     z-index: 2;
     padding: 4rem 1.5rem;
-    max-width: 66rem;
+    max-width: 70rem;
     margin: 0 auto;
 
     @media screen and (min-width: 700px) {
       padding: 8rem 3rem;
+    }
+
+    &.is-overlapping {
+      @media screen and (min-width: 700px) {
+        margin-top: -10rem;
+      }
     }
   }
 

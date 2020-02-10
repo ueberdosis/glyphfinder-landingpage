@@ -6,7 +6,7 @@
     <div class="app-section__background" :style="backgroundStyle">
       <slot name="background" />
     </div>
-    <div class="app-section__inner">
+    <div class="app-section__inner" :class="{ 'is-overlapping': overlap }">
       <slot />
     </div>
   </section>
@@ -32,6 +32,11 @@ export default {
 
     clipBottom: {
       default: true,
+      type: Boolean,
+    },
+
+    overlap: {
+      default: false,
       type: Boolean,
     },
   },
