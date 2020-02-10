@@ -1,4 +1,4 @@
-// This is where project configuration and plugin options are located. 
+// This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
 // Changes here require a server restart.
@@ -20,6 +20,7 @@ module.exports = {
   siteName: 'Gridsome',
   siteUrl: 'https://glyphfinder.com/',
   titleTemplate: '%s',
+  icon: './src/assets/images/favicon.png',
   port: 3000,
   plugins: [
     {

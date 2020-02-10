@@ -1,11 +1,14 @@
 <template>
   <div class="feature-item">
-    <div class="feature-item__header">
-      <icon class="feature-item__icon" :name="icon" v-if="icon" />
-      <h3 class="feature-item__title">
-        {{ title }}
-      </h3>
-    </div>
+    <img
+      class="feature-item__image"
+      :src="src"
+      alt=""
+      v-if="image"
+    >
+    <h3 class="feature-item__title">
+      {{ title }}
+    </h3>
     <p class="small">
       <slot />
     </p>
@@ -13,22 +16,22 @@
 </template>
 
 <script>
-import Icon from '@/components/Icon'
-
 export default {
-  components: {
-    Icon,
-  },
-
   props: {
     title: {
       required: true,
       type: String,
     },
 
-    icon: {
+    image: {
       default: null,
       type: String,
+    },
+  },
+
+  computed: {
+    src() {
+      return require(`~/assets/images/${this.image}`)
     },
   },
 }
