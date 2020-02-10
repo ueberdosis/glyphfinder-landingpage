@@ -159,6 +159,11 @@ export default {
     stop() {
       this.$el.innerHTML = ''
 
+      if (this.render) {
+        this.render.textures = {}
+        Render.stop(this.render)
+      }
+
       if (this.engine) {
         this.engine.events = {}
         World.clear(this.engine.world)
