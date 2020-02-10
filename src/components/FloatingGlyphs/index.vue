@@ -109,7 +109,7 @@ export default {
           {
             friction: 0,
             frictionAir: 0,
-            restitution: 1.05,
+            restitution: 1.02,
             slop: 0,
             chamfer: {
               radius: 10,
