@@ -54,10 +54,14 @@ export default {
         return ''
       }
 
+      const margin = this.clipTop ? this.clipOffset : 0
+      const paddingTop = this.clipTop ? (this.clipOffset / 2) : 0
+      const paddingBottom = this.clipBottom ? (this.clipOffset / 2) : 0
+
       return `
-        margin-top: -${this.clipTop ? this.clipOffset : 0}px;
-        padding-top: ${this.clipTop ? (this.clipOffset / 2) : 0}px;
-        padding-bottom: ${this.clipBottom ? (this.clipOffset / 2) : 0}px;
+        margin-top: -${margin}px;
+        padding-top: ${paddingTop}px;
+        padding-bottom: ${paddingBottom}px;
         `
     },
 
@@ -66,7 +70,9 @@ export default {
         return ''
       }
 
-      const clipPath = `polygon(0 ${this.clipTop ? this.clipOffset : 0}px, 100% 0%, 100% calc(100% - ${this.clipBottom ? this.clipOffset : 0}px), 0% 100%)`
+      const clipTop = this.clipTop ? this.clipOffset : 0
+      const clipBottom = this.clipBottom ? this.clipOffset : 0
+      const clipPath = `polygon(0 ${clipTop}px, 100% 0%, 100% calc(100% - ${clipBottom}px), 0% 100%)`
 
       return `
         -webkit-clip-path: ${clipPath};
