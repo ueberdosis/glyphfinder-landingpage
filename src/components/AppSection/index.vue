@@ -72,6 +72,7 @@ export default {
         -webkit-clip-path: ${clipPath};
         -moz-clip-path: ${clipPath};
         -ms-clip-path: ${clipPath};
+        -o-clip-path: ${clipPath};
         clip-path: ${clipPath};
         `
     },
