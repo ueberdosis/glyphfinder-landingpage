@@ -1,0 +1,19 @@
+.feature-item {
+
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    margin: 0;
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: $colorRed;
+    margin-bottom: 1rem;
+  }
+
+}
