@@ -213,8 +213,10 @@ export default {
         }
 
         this.images = images
-        this.view.enterViewport(this.init)
-        this.view.exitViewport(this.destroy)
+        this.$nextTick(() => {
+          this.view.enterViewport(this.init)
+          this.view.exitViewport(this.destroy)
+        })
       })
   },
 

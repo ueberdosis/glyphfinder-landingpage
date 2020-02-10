@@ -6,7 +6,7 @@
     <div class="app-section__background" :style="backgroundStyle">
       <slot name="background" />
     </div>
-    <div class="app-section__inner" :class="{ 'is-overlapping': overlap }">
+    <div class="app-section__inner" :class="{ 'is-overlapping': clipPathSupported && overlap }">
       <slot />
     </div>
   </section>
@@ -50,6 +50,10 @@ export default {
 
   computed: {
     style() {
+      if (!this.clipPathSupported) {
+        return ''
+      }
+
       return `
         margin-top: -${this.clipTop ? this.clipOffset : 0}px;
         padding-top: ${this.clipTop ? (this.clipOffset / 2) : 0}px;
@@ -58,6 +62,10 @@ export default {
     },
 
     backgroundStyle() {
+      if (!this.clipPathSupported) {
+        return ''
+      }
+
       const clipPath = `polygon(0 ${this.clipTop ? this.clipOffset : 0}px, 100% 0%, 100% calc(100% - ${this.clipBottom ? this.clipOffset : 0}px), 0% 100%)`
 
       return `
