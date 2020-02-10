@@ -1,5 +1,5 @@
 <template>
-  <div class="c-floating-glyphs" />
+  <div class="c-floating-glyphs" :class="{ 'is-loaded': !!images.length }" />
 </template>
 
 <script>
