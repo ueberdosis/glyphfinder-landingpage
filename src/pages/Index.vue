@@ -16,6 +16,22 @@
     </app-section>
 
     <app-section color="black">
+      <split>
+        <template v-slot:text>
+          <h2>
+            Finds Everything
+          </h2>
+          <p>
+            We made it’s easy to find the needle in the unicode haystack. Search for words, categories, look-alikes or colors – you can’t do it wrong.
+          </p>
+        </template>
+        <template v-slot:media>
+          <img class="rounded-image" src="~@/assets/images/large-feature.png" alt="">
+        </template>
+      </split>
+    </app-section>
+
+    <app-section color="black">
       <grid :options="{ medium: 'wide'}">
         <grid-item :options="{ medium: '4/12'}">
           <feature-item title="Looks like …" image="feature.png">
@@ -74,6 +90,7 @@
 
 <script>
 import Btn from '@/components/Btn'
+import Split from '@/components/Split'
 import AppSection from '@/components/AppSection'
 import FloatingGlyphs from '@/components/FloatingGlyphs'
 import FeatureItem from '@/components/FeatureItem'
@@ -83,6 +100,7 @@ import { Grid, GridItem } from '@/components/Grid'
 export default {
   components: {
     Btn,
+    Split,
     AppSection,
     FloatingGlyphs,
     FeatureItem,
