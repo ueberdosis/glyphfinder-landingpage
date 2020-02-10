@@ -111,6 +111,9 @@ export default {
             frictionAir: 0,
             restitution: 1.05,
             slop: 0,
+            chamfer: {
+              radius: 10,
+            },
             render: {
               fillStyle: '#F25D48',
               sprite: {
