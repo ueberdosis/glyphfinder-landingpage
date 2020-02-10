@@ -1,6 +1,6 @@
 <template>
   <Layout navigation-theme="bright">
-    <app-section narrow>
+    <app-section :clip-top="false" narrow>
       <h1>
         Impressum
       </h1>
