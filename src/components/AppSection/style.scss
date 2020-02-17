@@ -54,6 +54,11 @@
     padding: 4rem 1.5rem;
     max-width: 70rem;
     margin: 0 auto;
+    pointer-events: none;
+
+    & > * {
+      pointer-events: all;
+    }
 
     @media screen and (min-width: 700px) {
       padding: 8rem 3rem;
