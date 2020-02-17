@@ -23,6 +23,10 @@ const {
   Body,
   Bodies,
   Common,
+  Mouse,
+  Events,
+  MouseConstraint,
+  Constraint,
 } = Matter
 
 export default {
@@ -90,11 +94,11 @@ export default {
         },
       })
 
-      const count = Math.floor((this.width * this.height) / 9000)
-      const canvasStartX = -this.width * 0.5
-      const canvasStartY = -this.height * 0.5
-      const canvasEndX = this.width * 1.5
-      const canvasEndY = this.height * 1.5
+      const count = Math.floor((this.width * this.height) / 18000)
+      const canvasStartX = -this.width * 0.2
+      const canvasStartY = -this.height * 0.2
+      const canvasEndX = this.width * 1.2
+      const canvasEndY = this.height * 1.2
       const baseSize = scaleLinear()
         .domain([400, 1200])
         .range([50, 80])
@@ -112,7 +116,7 @@ export default {
           {
             friction: 0,
             frictionAir: 0,
-            restitution: 1.04,
+            // restitution: 1,
             slop: 0,
             chamfer: {
               radius: 10,
@@ -150,8 +154,48 @@ export default {
         World.add(this.engine.world, body)
       }
 
+      this.mouse = Mouse.create(document.body)
+      this.mouse.element.removeEventListener('mousewheel', this.mouse.mousewheel)
+      this.mouse.element.removeEventListener('DOMMouseScroll', this.mouse.mousewheel)
+      const { x, y } = this.getMousePosition()
+      this.mouseBody = Bodies.circle(x, y, 15, {
+        mass: 2,
+        isStatic: false,
+        // restitution: 1,
+        friction: 0,
+        frictionAir: 0,
+        inertia: Infinity,
+        radius: 30,
+        render: {
+          fillStyle: 'rgba(0,0,0,0)',
+        },
+      })
+      World.add(this.engine.world, this.mouseBody)
+
       Engine.run(this.engine)
       Render.run(this.render)
+      Events.on(this.engine, 'afterUpdate', this.handleUpdate)
+    },
+
+    getMousePosition() {
+      const bounds = this.render.canvas.getBoundingClientRect()
+      const x = this.mouse.position.x - window.pageXOffset - bounds.x
+      const y = this.mouse.position.y - window.pageYOffset - bounds.y
+
+      return { x, y }
+    },
+
+    handleUpdate() {
+      if (!this.mouse.position.x) {
+        return
+      }
+
+      const { x, y } = this.getMousePosition()
+
+      Body.setVelocity(this.mouseBody, {
+        x: x - this.mouseBody.position.x,
+        y: y - this.mouseBody.position.y,
+      })
     },
 
     setDimensions() {
@@ -169,6 +213,7 @@ export default {
 
       if (this.engine) {
         this.engine.events = {}
+        Events.off(this.engine, 'afterUpdate', this.handleUpdate)
         World.clear(this.engine.world)
         Engine.clear(this.engine)
       }
