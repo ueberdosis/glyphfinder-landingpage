@@ -1,5 +1,8 @@
 <template>
-  <div class="c-floating-glyphs" :class="{ 'is-loaded': !!images.length }" />
+  <div class="c-floating-glyphs" :class="{ 'is-loaded': !!images.length }">
+    <div class="c-floating-glyphs__canvas" ref="container" />
+    <resize-observer @notify="onResize" />
+  </div>
 </template>
 
 <script>
@@ -61,7 +64,7 @@ export default {
       this.engine.world.gravity.y = 0
 
       this.render = Render.create({
-        element: this.$el,
+        element: this.$refs.container,
         engine: this.engine,
         options: {
           wireframes: false,
@@ -109,7 +112,7 @@ export default {
           {
             friction: 0,
             frictionAir: 0,
-            restitution: 1.02,
+            restitution: 1.04,
             slop: 0,
             chamfer: {
               radius: 10,
@@ -157,7 +160,7 @@ export default {
     },
 
     stop() {
-      this.$el.innerHTML = ''
+      this.$refs.container.innerHTML = ''
 
       if (this.render) {
         this.render.textures = {}
@@ -171,14 +174,16 @@ export default {
       }
     },
 
+    onResize() {
+      this.setDimensions()
+    },
+
     init() {
-      window.addEventListener('resize', this.setDimensions)
       this.setDimensions()
       this.start()
     },
 
     destroy() {
-      window.removeEventListener('resize', this.setDimensions)
       this.stop()
     },
   },

@@ -1,7 +1,9 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
+import VueResize from 'vue-resize'
 import DefaultLayout from '~/layouts/Default.vue'
+import 'vue-resize/dist/vue-resize.css'
 
 export default function (Vue, { router, head, isClient }) {
 
@@ -36,6 +38,7 @@ export default function (Vue, { router, head, isClient }) {
     return false
   }
 
+  Vue.use(VueResize)
 
   Vue.mixin({
     data() {
