@@ -62,9 +62,9 @@
             Be the first to know
           </h3>
           <p>
-            We’ll inform you about new apps and deals.
+            We’ll inform you about new apps and updates.
             <br>
-            No spam, we promise.
+            No spam—we promise.
           </p>
           <newsletter-form />
         </grid-item>

@@ -70,7 +70,7 @@
         </grid-item>
         <grid-item :options="{ medium: '4/12'}">
           <small-feature-item title="Really Fast Search" icon="fast">
-            Search should feel instant, even when looking through hundred thousands tags, so that‘s what we made it.
+            Search should feel instant, even when looking through hundred of thousands of tags, so that‘s what we made it.
           </small-feature-item>
         </grid-item>
         <grid-item :options="{ medium: '4/12'}">

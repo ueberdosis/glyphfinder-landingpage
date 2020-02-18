@@ -50,7 +50,7 @@
         Privacy Policy for Glyphfinder
       </h1>
       <p>
-        We don’t track your usage of Glyphfinder. We need an Internet connection during the installation though:
+        We don’t track your usage of Glyphfinder. We need an internet connection during the installation though:
       </p>
       <h3>
         License Check

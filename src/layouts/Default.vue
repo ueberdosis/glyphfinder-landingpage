@@ -65,12 +65,12 @@
                 Good news for you: We have a <a href="https://feedback.glyphfinder.com">public feedback board</a>.
               </p>
               <p>
-                Use this board to promote your ideas not only to us, but to other users as well. We will consider and reply to every suggestion.
+                Use this board to promote your ideas not only to us but to other users as well. We will consider and reply to every suggestion.
               </p>
             </accordion>
             <accordion title="Do you collect my personal data?">
               <p>
-                The app needs the Internet connection to check your license once, everything else is working offline. We don’t track anything at all, except the number of sales and the number of pageviews.
+                The app needs the internet connection to check your license once, everything else is working offline. We don’t track anything at all, except the number of sales and the number of pageviews.
               </p>
               <p>
                 To learn more, check out our <a href="/privacy-policy">Privacy Policy</a>.
