@@ -20,7 +20,7 @@
         Contact
       </h3>
       <p>
-        Email: <a href="mailto:support@mouseless.app">support@mouseless.app</a>
+        Email: <a href="mailto:support@glyphfinder.com">support@glyphfinder.com</a>
       </p>
       <h3>
         Dispute resolution
