@@ -22,7 +22,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:support@mouseless.app" target="_blank">
+                  <a href="mailto:support@glyphfinder.com" target="_blank">
                     Support
                   </a>
                 </li>
@@ -54,7 +54,7 @@
             </grid-item>
           </grid>
           <p>
-            Made with ❤️ by <a href="https://twitter.com/_ueberdosis" target="_blank">überclub</a>
+            Made with ❤️ by <a href="https://twitter.com/_ueberdosis" target="_blank">überdosis</a>
           </p>
         </grid-item>
         <grid-item :options="{ medium: '6/12' }">
