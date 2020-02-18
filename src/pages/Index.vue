@@ -35,7 +35,7 @@
       <grid :options="{ medium: 'wide'}">
         <grid-item :options="{ medium: '4/12'}">
           <feature-item title="Looks like …" image="feature.png">
-            It’s easier to visually remember a glyph, so we made it easy to search for look-alikes. Type anything you remember and find the correct glyph instant.
+            It’s easier to visually remember a glyph, so we made it easy to search for look-alikes. Type anything you remember and find the correct glyph instantly.
           </feature-item>
         </grid-item>
         <grid-item :options="{ medium: '4/12'}">
