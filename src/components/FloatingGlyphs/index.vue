@@ -25,8 +25,6 @@ const {
   Common,
   Mouse,
   Events,
-  MouseConstraint,
-  Constraint,
 } = Matter
 
 export default {
@@ -116,7 +114,7 @@ export default {
           {
             friction: 0,
             frictionAir: 0,
-            // restitution: 1,
+            restitution: 0.8,
             slop: 0,
             chamfer: {
               radius: 10,
@@ -154,14 +152,17 @@ export default {
         World.add(this.engine.world, body)
       }
 
+
       this.mouse = Mouse.create(document.body)
       this.mouse.element.removeEventListener('mousewheel', this.mouse.mousewheel)
       this.mouse.element.removeEventListener('DOMMouseScroll', this.mouse.mousewheel)
+
       const { x, y } = this.getMousePosition()
+
       this.mouseBody = Bodies.circle(x, y, 15, {
         mass: 2,
-        isStatic: false,
-        // restitution: 1,
+        restitution: 0.8,
+        slop: 0,
         friction: 0,
         frictionAir: 0,
         inertia: Infinity,
