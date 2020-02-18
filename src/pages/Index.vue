@@ -22,7 +22,7 @@
             Finds Everything
           </h2>
           <p>
-            We made it’s easy to find the needle in the unicode haystack. Search for words, categories, look-alikes or colors – you can’t do it wrong.
+            We made looking for the needle in the unicode haystack easy. Search for words, categories, look-alikes or colors – you can’t do it wrong.
           </p>
         </template>
         <template v-slot:media>
