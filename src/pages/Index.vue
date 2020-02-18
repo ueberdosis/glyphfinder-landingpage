@@ -5,7 +5,7 @@
         <floating-glyphs />
       </template>
       <h1 class="huge">
-        Every fucking glyph at your fingertips
+        Every fricking glyph at your fingertips
       </h1>
       <p class="large">
         Glyphfinder is the missing character search for designers, developers and writers.
