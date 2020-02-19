@@ -5,7 +5,7 @@
         <floating-glyphs />
       </template>
       <h1 class="huge">
-        Every fucking glyph at your fingertips
+        Every fricking glyph at your fingertips
       </h1>
       <p class="large">
         Glyphfinder is the missing character search for designers, developers and writers.
@@ -22,7 +22,7 @@
             Finds Everything
           </h2>
           <p>
-            We made it’s easy to find the needle in the unicode haystack. Search for words, categories, look-alikes or colors – you can’t do it wrong.
+            We made looking for the needle in the unicode haystack easy. Search for words, categories, look-alikes or colors – you can’t do it wrong.
           </p>
         </template>
         <template v-slot:media>
@@ -35,7 +35,7 @@
       <grid :options="{ medium: 'wide'}">
         <grid-item :options="{ medium: '4/12'}">
           <feature-item title="Looks like …" image="feature.png">
-            It’s easier to visually remember a glyph, so we made it easy to search for look-alikes. Type anything you remember and find the correct glyph instant.
+            It’s easier to visually remember a glyph, so we made it easy to search for look-alikes. Type anything you remember and find the correct glyph instantly.
           </feature-item>
         </grid-item>
         <grid-item :options="{ medium: '4/12'}">
@@ -70,7 +70,7 @@
         </grid-item>
         <grid-item :options="{ medium: '4/12'}">
           <small-feature-item title="Really Fast Search" icon="fast">
-            Search should feel instant, even when looking through hundred thousands tags, so that‘s what we made it.
+            Search should feel instant, even when looking through hundred of thousands of tags, so that‘s what we made it.
           </small-feature-item>
         </grid-item>
         <grid-item :options="{ medium: '4/12'}">
