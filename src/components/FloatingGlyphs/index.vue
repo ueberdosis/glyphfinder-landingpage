@@ -1,5 +1,5 @@
 <template>
-  <div class="c-floating-glyphs" :class="{ 'is-loaded': !!images.length }">
+  <div class="c-floating-glyphs" :class="{ 'is-loaded': imagesLoaded }">
     <div class="c-floating-glyphs__canvas" ref="container" />
     <resize-observer @notify="onResize" />
   </div>
@@ -44,9 +44,23 @@ export default {
     }
   },
 
+  computed: {
+    area() {
+      return this.width * this.height
+    },
+
+    imagesLoaded() {
+      return !!this.images.length
+    },
+
+    useMouse() {
+      return this.hasMouse && !this.isTouchDevice()
+    },
+  },
+
   watch: {
-    width(newValue, oldValue) {
-      if (oldValue === null) {
+    area(newValue, oldValue) {
+      if (oldValue === 0 || !this.imagesLoaded) {
         return
       }
 
@@ -56,6 +70,20 @@ export default {
   },
 
   methods: {
+    isTouchDevice() {
+      const prefixes = ' -webkit- -moz- -o- -ms- '.split(' ')
+      const mq = query => window.matchMedia(query).matches
+
+      // eslint-disable-next-line
+      if (('ontouchstart' in window) || (window.DocumentTouch && document instanceof DocumentTouch)) {
+        return true
+      }
+
+      const query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('')
+
+      return mq(query)
+    },
+
     imageDataToImage(imagedata) {
       const canvas = document.createElement('canvas')
       const ctx = canvas.getContext('2d')
@@ -159,7 +187,7 @@ export default {
         World.add(this.engine.world, body)
       }
 
-      if (this.hasMouse) {
+      if (this.useMouse) {
         this.mouse = Mouse.create(document.body)
         this.mouse.element.removeEventListener('mousewheel', this.mouse.mousewheel)
         this.mouse.element.removeEventListener('DOMMouseScroll', this.mouse.mousewheel)
@@ -184,7 +212,7 @@ export default {
       Engine.run(this.engine)
       Render.run(this.render)
 
-      if (this.hasMouse) {
+      if (this.useMouse) {
         Events.on(this.engine, 'afterUpdate', this.handleUpdate)
       }
     },
