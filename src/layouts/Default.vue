@@ -75,7 +75,10 @@
                 The app needs the internet connection to check your license once, everything else is working offline. We don’t track anything at all, except the number of sales and the number of pageviews.
               </p>
               <p>
-                To learn more, check out our <a href="/privacy-policy">Privacy Policy</a>.
+                To learn more, check out our
+                <g-link to="/privacy">
+                  Privacy Policy
+                </g-link>.
               </p>
             </accordion>
           </grid-item>
