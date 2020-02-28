@@ -95,7 +95,7 @@
             meta="macOS 10.14 or higher"
           />
           <download-btn
-            icon="mac"
+            icon="windows"
             label="Download for"
             text="Windows"
             :href="downloadLink"
