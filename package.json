@@ -13,7 +13,7 @@
     "d3-scale": "^3.2.1",
     "gridilydidily": "^3.0.1",
     "gridsome": "^0.7.13",
-    "gsap": "^3.2.0",
+    "gsap": "^3.2.2",
     "load-asset": "^1.2.0",
     "matter-js": "^0.14.2",
     "matter-wrap": "^0.2.0",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.8.3",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-scrumpy": "^1.0.0",
