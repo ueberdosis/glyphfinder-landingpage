@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ${htmlAttrs}>
+  <head>
+    ${head}
+  </head>
+  <body ${bodyAttrs}>
+    ${app}
+    ${scripts}
+
+    <!-- ${process.env.NODE_ENV === 'production'
+      ? '<script async defer src="https://data.glyphfinder.com/app.js"></script><noscript><img src="https://data.glyphfinder.com/image.gif" alt=""></noscript>'
+      : ''
+    } -->
+
+    <!-- <script type="text/javascript">
+      /* eslint-disable */
+      if ('${process.env.NODE_ENV}' === 'production') {
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "3432ee45-9a69-4e42-be0f-441b59cf7a44";
+
+        (function () {
+          d = document;
+          s = d.createElement("script");
+          s.src = "https://client.crisp.chat/l.js";
+          s.async = 1;
+          d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+      }
+    </script> -->
+
+    <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+  </body>
+</html>

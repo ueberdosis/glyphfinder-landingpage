@@ -25,7 +25,7 @@
           Glyphfinder is the missing character search for designers, developers and writers.
         </p>
         <p>
-          <btn>
+          <btn :href="gumroadLink" target="_blank">
             Get it now
           </btn>
         </p>
