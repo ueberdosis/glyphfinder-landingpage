@@ -1,6 +1,6 @@
 <template>
   <div class="download-button">
-    <btn class="download-button__btn" :href="href">
+    <btn class="download-button__btn" :href="href" :download="download">
       <icon class="download-button__icon" :name="icon" v-if="icon" />
       <span class="download-button__content">
         <span class="download-button__label">
@@ -51,6 +51,11 @@ export default {
     href: {
       default: null,
       type: String,
+    },
+
+    download: {
+      default: true,
+      type: Boolean,
     },
   },
 }
