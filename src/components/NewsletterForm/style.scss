@@ -6,13 +6,13 @@
   &__content {
     display: flex;
     width: 100%;
-    background-color: rgba($colorWhite, 0.1);
+    background-color: rgba($colorWhite, 0.05);
     border-radius: 9px;
     padding: 0.4rem;
     transition: box-shadow 0.2s $ease;
 
     &:focus-within {
-      box-shadow: 0 0 0 2px $colorRed;
+      box-shadow: 0 0 0 2px rgba($colorWhite, 0.25);
     }
   }
 
@@ -47,7 +47,7 @@
 
   &__button {
     flex: 0 0 auto;
-    background-color: $colorRed;
+    background-color: $colorWhite;
     color: $colorBlack;
     border-radius: 6px;
     padding: 0.4rem 0.8rem;
