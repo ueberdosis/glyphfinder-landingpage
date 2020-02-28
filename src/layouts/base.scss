@@ -185,6 +185,10 @@ button:not([disabled]) {
   color: $colorRed;
 }
 
+.white {
+  color: $colorWhite;
+}
+
 .truncate {
   white-space: nowrap;
   overflow: hidden;

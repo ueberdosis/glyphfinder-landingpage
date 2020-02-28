@@ -32,7 +32,7 @@
       </app-section>
 
       <app-section :clip-bottom="false">
-        <h2>
+        <h2 class="white">
           FAQ
         </h2>
         <grid :options="{ medium: 'wide'}">
@@ -83,7 +83,7 @@
       </app-section>
 
       <app-section color="black" id="download">
-        <h2>
+        <h2 class="white">
           Download
         </h2>
         <div>
