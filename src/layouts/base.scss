@@ -116,6 +116,11 @@ h5,
   color: $colorWhite;
 }
 
+p {
+  margin: 1em 0;
+}
+
+p,
 h1,
 .is-h1,
 h2,
@@ -133,10 +138,6 @@ h5,
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-p {
-  margin: 1em 0;
 }
 
 small,

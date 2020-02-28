@@ -1,8 +1,11 @@
 .btn {
+  display: inline-flex;
+  align-items: center;
   background-color: $colorWhite;
   color: $colorBlack;
   border-radius: 12px;
   font-weight: 700;
+  margin-left: 1rem;
   padding: 1rem 1.2rem;
   font-size: 1.2rem;
   text-align: center;
@@ -14,6 +17,10 @@
   ;
   transition: box-shadow 0.2s $ease;
   white-space: nowrap;
+
+  &:first-child {
+    margin-left: 0;
+  }
 
   &:hover {
     box-shadow:

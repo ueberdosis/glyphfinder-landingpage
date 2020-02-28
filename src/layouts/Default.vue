@@ -24,9 +24,11 @@
         <p class="large">
           Glyphfinder is the missing character search for designers, developers and writers.
         </p>
-        <btn>
-          Get it now
-        </btn>
+        <p>
+          <btn>
+            Get it now
+          </btn>
+        </p>
       </app-section>
 
       <app-section :clip-bottom="false">
@@ -79,6 +81,28 @@
           </grid-item>
         </grid>
       </app-section>
+
+      <app-section color="black" id="download">
+        <h2>
+          Download
+        </h2>
+        <div>
+          <download-btn
+            icon="mac"
+            label="Download for"
+            text="macOS"
+            :href="downloadLink"
+            meta="macOS 10.14 or higher"
+          />
+          <download-btn
+            icon="mac"
+            label="Download for"
+            text="Windows"
+            :href="downloadLink"
+            meta="Windows 10 or higher"
+          />
+        </div>
+      </app-section>
     </main>
 
     <footer class="app__footer">
@@ -89,16 +113,9 @@
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
 import Btn from '@/components/Btn'
+import DownloadBtn from '@/components/DownloadBtn'
 import ProductHuntBar from '@/components/ProductHuntBar'
 import Navigation from '@/components/Navigation'
 import AppSection from '@/components/AppSection'
@@ -118,6 +135,7 @@ export default {
 
   components: {
     Btn,
+    DownloadBtn,
     ProductHuntBar,
     Navigation,
     AppSection,

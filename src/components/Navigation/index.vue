@@ -11,7 +11,7 @@
           </g-link>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" :href="downloadLink" download>
+          <a class="navigation__link" href="#download" download>
             Download
           </a>
         </li>
