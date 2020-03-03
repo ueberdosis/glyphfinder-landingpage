@@ -17,7 +17,7 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Glyphfinder',
   siteUrl: 'https://glyphfinder.com/',
   titleTemplate: '%s',
   icon: './src/assets/images/favicon.png',
