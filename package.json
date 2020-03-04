@@ -13,12 +13,12 @@
     "d3-scale": "^3.2.1",
     "gridilydidily": "^3.0.1",
     "gridsome": "^0.7.13",
-    "gsap": "^3.2.2",
+    "gsap": "^3.2.4",
     "load-asset": "^1.2.0",
     "matter-js": "^0.14.2",
     "matter-wrap": "^0.2.0",
     "scrollmonitor": "^1.2.4",
-    "swiper": "^5.3.1",
+    "swiper": "^5.3.6",
     "vue-resize": "^0.4.5"
   },
   "devDependencies": {
