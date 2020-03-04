@@ -1,0 +1,87 @@
+.product-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $colorBlack;
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 2rem 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 700px) {
+    border-radius: 20px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem 1.5rem;
+
+    @media screen and (min-width: 700px) {
+      padding: 2.5rem 2rem;
+      width: 50%;
+    }
+  }
+
+  &__media {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.12;
+    transition: transform 0.5s $ease;
+    will-change: transform;
+    
+    @media screen and (min-width: 700px) {
+      position: relative;
+      width: 50%;
+      height: auto;
+      align-self: stretch;
+      opacity: 1;
+    }
+  }
+
+  &:hover &__media {
+    transform: scale(1.05);
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  &__headline {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0.3em;
+
+    @media screen and (min-width: 700px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__subline {
+    font-weight: 400;
+    font-size: 1.1rem;
+    opacity: 0.7;
+
+    @media screen and (min-width: 700px) {
+      font-size: 1.5rem;
+    }
+  }
+}

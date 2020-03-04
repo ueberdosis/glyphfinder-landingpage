@@ -24,13 +24,15 @@
         <p class="large">
           Glyphfinder is the missing character search for designers, developers and writers.
         </p>
-        <btn>
-          Get it now
-        </btn>
+        <p>
+          <btn :href="gumroadLink" target="_blank">
+            Get it now
+          </btn>
+        </p>
       </app-section>
 
       <app-section :clip-bottom="false">
-        <h2>
+        <h2 class="white">
           FAQ
         </h2>
         <grid :options="{ medium: 'wide'}">
@@ -73,11 +75,36 @@
                 The app needs the internet connection to check your license once, everything else is working offline. We don’t track anything at all, except the number of sales and the number of pageviews.
               </p>
               <p>
-                To learn more, check out our <a href="/privacy-policy">Privacy Policy</a>.
+                To learn more, check out our
+                <g-link to="/privacy">
+                  Privacy Policy
+                </g-link>.
               </p>
             </accordion>
           </grid-item>
         </grid>
+      </app-section>
+
+      <app-section color="black" id="download">
+        <h2 class="white">
+          Download
+        </h2>
+        <div>
+          <download-btn
+            icon="mac"
+            label="Download for"
+            text="macOS"
+            :href="downloadLink"
+            meta="macOS 10.14 or higher"
+          />
+          <download-btn
+            icon="windows"
+            label="Download for"
+            text="Windows"
+            :href="downloadLink"
+            meta="Windows 10 or higher"
+          />
+        </div>
       </app-section>
     </main>
 
@@ -89,16 +116,9 @@
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
 import Btn from '@/components/Btn'
+import DownloadBtn from '@/components/DownloadBtn'
 import ProductHuntBar from '@/components/ProductHuntBar'
 import Navigation from '@/components/Navigation'
 import AppSection from '@/components/AppSection'
@@ -118,6 +138,7 @@ export default {
 
   components: {
     Btn,
+    DownloadBtn,
     ProductHuntBar,
     Navigation,
     AppSection,

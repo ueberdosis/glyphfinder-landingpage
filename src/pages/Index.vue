@@ -10,12 +10,14 @@
       <p class="large">
         Glyphfinder is the missing character search for designers, developers and writers.
       </p>
-      <btn>
-        Get it now
-      </btn>
+      <p>
+        <btn :href="gumroadLink" target="_blank">
+          Get it now
+        </btn>
+      </p>
     </app-section>
 
-    <app-section color="black" overlap>
+    <app-section color="black" overlap id="features">
       <split>
         <template v-slot:text>
           <h2>
@@ -79,7 +81,7 @@
           </small-feature-item>
         </grid-item>
         <grid-item :options="{ medium: '4/12'}">
-          <small-feature-item title="macOS & Windows" icon="os">
+          <small-feature-item title="macOS & Windows" icon="mac">
             Glyphfinder will work on your favorite operating system (as long as it’s not Linux). All licenses include both apps.
           </small-feature-item>
         </grid-item>

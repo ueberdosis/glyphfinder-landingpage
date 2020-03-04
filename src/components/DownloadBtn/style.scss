@@ -1,0 +1,41 @@
+.download-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &__btn {
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+  }
+
+  &__icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.5rem;
+  }
+
+  &__content {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 0.7rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+  }
+
+  &__meta {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+}

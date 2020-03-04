@@ -1,5 +1,11 @@
 <template>
   <div class="app-footer small">
+    <product-banner
+      href="https://mouseless.app/?ref=glyphfinder"
+      color="#FDD231"
+      headline="Have you seen Mouseless?"
+      subline="Unleash your keyboard’s superpower →"
+    />
     <div class="app-footer__section">
       <grid :options="{ default: 'backwards wide', medium: 'forwards' }">
         <grid-item :options="{ medium: '6/12' }">
@@ -7,7 +13,7 @@
             <grid-item :options="{ medium: '6/12' }">
               <ul>
                 <li>
-                  <g-link to="/">
+                  <g-link to="/#features">
                     Features
                   </g-link>
                 </li>
@@ -76,12 +82,14 @@
 <script>
 import { Grid, GridItem } from '@/components/Grid'
 import NewsletterForm from '@/components/NewsletterForm'
+import ProductBanner from '@/components/ProductBanner'
 
 export default {
   components: {
     Grid,
     GridItem,
     NewsletterForm,
+    ProductBanner,
   },
 }
 </script>
