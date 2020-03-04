@@ -13,7 +13,7 @@
             <grid-item :options="{ medium: '6/12' }">
               <ul>
                 <li>
-                  <g-link to="/">
+                  <g-link to="/#features">
                     Features
                   </g-link>
                 </li>

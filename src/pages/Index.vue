@@ -17,7 +17,7 @@
       </p>
     </app-section>
 
-    <app-section color="black" overlap>
+    <app-section color="black" overlap id="features">
       <split>
         <template v-slot:text>
           <h2>
