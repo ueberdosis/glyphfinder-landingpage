@@ -6,6 +6,15 @@
   text-decoration: none;
   border-radius: 12px;
   overflow: hidden;
+  margin: 2rem 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media screen and (min-width: 700px) {
     border-radius: 20px;
