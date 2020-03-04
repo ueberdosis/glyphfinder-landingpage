@@ -2,7 +2,7 @@
   <div :class="`navigation navigation--${theme}`">
     <div class="navigation__inner">
       <g-link class="navigation__logo" to="/">
-        <g-image class="navigation__logo-image" src="~/assets/images/logo.png" />
+        <g-image class="navigation__logo-image" src="~/assets/images/logo.png" immediate />
         <span class="navigation__logo-text">
           Glyphfinder
         </span>
