@@ -1,8 +1,11 @@
 <template>
   <div :class="`navigation navigation--${theme}`">
     <div class="navigation__inner">
-      <g-link class="navigation__link navigation__logo" to="/">
-        Glyphfinder
+      <g-link class="navigation__logo" to="/">
+        <g-image class="navigation__logo-image" src="~/assets/images/logo.png" />
+        <span class="navigation__logo-text">
+          Glyphfinder
+        </span>
       </g-link>
       <ul class="navigation__menu">
         <li class="navigation__item">

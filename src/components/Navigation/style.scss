@@ -26,6 +26,22 @@
   &__logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+  }
+
+  &__logo-image {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+  }
+
+  &__logo-text {
+    display: none;
+    font-weight: 900;
+
+    @media screen and (min-width: 700px) {
+      display: block;
+    }
   }
   
   &__icon {
