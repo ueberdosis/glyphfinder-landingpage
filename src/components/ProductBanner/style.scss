@@ -30,6 +30,8 @@
     width: 100%;
     height: 100%;
     opacity: 0.12;
+    transition: transform 0.5s $ease;
+    will-change: transform;
     
     @media screen and (min-width: 700px) {
       position: relative;
@@ -38,6 +40,10 @@
       align-self: stretch;
       opacity: 1;
     }
+  }
+
+  &:hover &__media {
+    transform: scale(1.05);
   }
 
   &__image {
