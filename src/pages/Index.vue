@@ -28,7 +28,10 @@
           </p>
         </template>
         <template v-slot:media>
-          <img class="rounded-image" src="~@/assets/images/large-feature.png" alt="">
+          <demo-video
+            :ratio="1158/680"
+            name="banner.mp4"
+          />
         </template>
       </split>
     </app-section>
@@ -98,6 +101,7 @@ import FloatingGlyphs from '@/components/FloatingGlyphs'
 import FeatureItem from '@/components/FeatureItem'
 import SmallFeatureItem from '@/components/SmallFeatureItem'
 import { Grid, GridItem } from '@/components/Grid'
+import DemoVideo from '@/components/DemoVideo'
 
 export default {
   components: {
@@ -109,6 +113,7 @@ export default {
     SmallFeatureItem,
     Grid,
     GridItem,
+    DemoVideo,
   },
 }
 </script>
