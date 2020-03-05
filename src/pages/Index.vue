@@ -37,7 +37,7 @@
     </app-section>
 
     <app-section color="black">
-      <grid :options="{ medium: 'wide'}">
+      <grid :options="{ default: 'wide'}">
         <grid-item :options="{ medium: '4/12'}">
           <feature-item title="Looks like …" video="lookalikes.mp4">
             It’s easier to visually remember a glyph, so we made it easy to search for look-alikes. Type anything you remember and find the correct glyph instantly.
@@ -57,7 +57,7 @@
     </app-section>
 
     <app-section color="deep-black">
-      <grid :options="{ medium: 'wide'}">
+      <grid :options="{ default: 'wide'}">
         <grid-item :options="{ medium: '4/12'}">
           <small-feature-item title="30.000+ Glyphs" icon="glyphs">
             With our enormous database you have more than 30.000 characters right at your fingertips, every single one manually tagged.
