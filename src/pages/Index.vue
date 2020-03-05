@@ -41,12 +41,12 @@
           </feature-item>
         </grid-item>
         <grid-item :options="{ medium: '4/12'}">
-          <feature-item title="The Best Emoji Search" image="feature.png">
+          <feature-item title="The Best Emoji Search" video="emojis.mp4">
             We have manually added and tagged every single emoji. That probably makes Glyphfinder the single best emoji search out there. 🧐
           </feature-item>
         </grid-item>
         <grid-item :options="{ medium: '4/12'}">
-          <feature-item title="Learn More" image="feature.png">
+          <feature-item title="Learn More" video="shortcuts.mp4">
             In case you want to go mouseless, learn the keyboard shortcuts for all your favorite glyphs right away. Coders copy the entity.
           </feature-item>
         </grid-item>

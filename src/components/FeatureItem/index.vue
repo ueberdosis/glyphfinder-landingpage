@@ -8,7 +8,7 @@
     >
     <demo-video
       class="feature-item__image"
-      :ratio="486/680"
+      :ratio="500/680"
       :name="video"
       v-if="video"
     />

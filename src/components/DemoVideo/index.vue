@@ -3,7 +3,7 @@
     <div class="demo-video__ratio" :style="`padding-bottom: ${ratio * 100}%`">
       <video
         class="demo-video__video"
-        src="@/assets/videos/lookalikes.mp4"
+        :src="url"
         playsinline
         autoplay
         muted
