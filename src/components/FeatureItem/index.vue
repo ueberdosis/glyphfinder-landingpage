@@ -6,6 +6,12 @@
       alt=""
       v-if="image"
     >
+    <demo-video
+      class="feature-item__image"
+      :ratio="486/680"
+      :name="video"
+      v-if="video"
+    />
     <h3 class="feature-item__title">
       {{ title }}
     </h3>
@@ -16,7 +22,13 @@
 </template>
 
 <script>
+import DemoVideo from '@/components/DemoVideo'
+
 export default {
+  components: {
+    DemoVideo,
+  },
+
   props: {
     title: {
       required: true,
@@ -24,6 +36,11 @@ export default {
     },
 
     image: {
+      default: null,
+      type: String,
+    },
+
+    video: {
       default: null,
       type: String,
     },

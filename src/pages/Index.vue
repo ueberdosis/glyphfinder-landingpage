@@ -36,7 +36,7 @@
     <app-section color="black">
       <grid :options="{ medium: 'wide'}">
         <grid-item :options="{ medium: '4/12'}">
-          <feature-item title="Looks like …" image="feature.png">
+          <feature-item title="Looks like …" video="lookalikes.mp4">
             It’s easier to visually remember a glyph, so we made it easy to search for look-alikes. Type anything you remember and find the correct glyph instantly.
           </feature-item>
         </grid-item>
