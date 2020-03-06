@@ -50,6 +50,7 @@ The app needs the internet connection to check your license once, everything els
 
 ## Additional Links
 
+* [Read as HTML](/simple.html)
 * [Open Startup](https://floatie.app/glyphfinder)
 * [Press Kit](/glyphfinder-press-kit.zip)
 * [Privacy Policy](/privacy)
