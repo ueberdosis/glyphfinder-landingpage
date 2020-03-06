@@ -39,7 +39,7 @@
           <grid-item :options="{ medium: '6/12'}">
             <accordion title="Do you offer a trial?">
               <p>
-                We didn’t implement a trial, but feel free to purchase the app. If it’s not for you <a href="mailto:support@glyphfinder.com">send a short message</a>. We’ll refund your order, no questions asked.
+                We didn’t implement a trial, but feel free to purchase the app. If you’re not happy <a href="mailto:support@glyphfinder.com">send a short message</a>. We’ll refund your order, no questions asked.
               </p>
             </accordion>
             <accordion title="Does Glyphfinder have all unicode characters in the world?">
@@ -102,7 +102,7 @@
             label="Download for"
             text="Windows"
             :href="downloadLinkWin"
-            meta="Windows 10 or higher"
+            meta="Windows 10"
           />
         </div>
       </app-section>
