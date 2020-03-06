@@ -18,7 +18,7 @@
                   </g-link>
                 </li>
                 <li>
-                  <a :href="downloadLink" download>
+                  <a href="#download">
                     Download
                   </a>
                 </li>

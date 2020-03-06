@@ -94,14 +94,14 @@
             icon="mac"
             label="Download for"
             text="macOS"
-            :href="downloadLink"
+            :href="downloadLinkMac"
             meta="macOS 10.14 or higher"
           />
           <download-btn
             icon="windows"
             label="Download for"
             text="Windows"
-            :href="downloadLink"
+            :href="downloadLinkWin"
             meta="Windows 10 or higher"
           />
         </div>
