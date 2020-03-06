@@ -1,11 +1,37 @@
-// This is the main.js file. Import global CSS and scripts here.
-// The Client API can be used here. Learn more: gridsome.org/docs/client-api
-
 import VueResize from 'vue-resize'
 import DefaultLayout from '~/layouts/Default.vue'
 import 'vue-resize/dist/vue-resize.css'
 
 export default function (Vue, { router, head, isClient }) {
+  head.meta.push({
+    name: 'description',
+    content: 'Glyphfinder is the missing character search for designers, developers and writers.',
+  })
+
+  head.meta.push({
+    property: 'og:title',
+    content: 'Glyphfinder',
+  })
+
+  head.meta.push({
+    property: 'og:url',
+    content: 'https://glyphfinder.com',
+  })
+
+  head.meta.push({
+    property: 'og:image',
+    content: 'https://glyphfinder.com/opengraph.png',
+  })
+
+  head.meta.push({
+    property: 'og:description',
+    content: 'Glyphfinder is the missing character search for designers, developers and writers.',
+  })
+
+  head.meta.push({
+    name: 'twitter:card',
+    content: 'summary',
+  })
 
   const areClipPathShapesSupported = function () {
     const base = 'clipPath'
