@@ -26,7 +26,7 @@
         </p>
         <p>
           <btn :href="gumroadLink" target="_blank">
-            Get it now
+            Buy for $4.99
           </btn>
         </p>
       </app-section>
