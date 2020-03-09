@@ -10,14 +10,7 @@
       <p class="large">
         Glyphfinder is the missing character search for designers, developers and writers.
       </p>
-      <p>
-        <btn :href="gumroadLink" target="_blank">
-          Get it now
-        </btn>
-      </p>
-      <p class="meta">
-        30-Day Money-Back Guarantee
-      </p>
+      <buy-button label="Get it now" />
     </app-section>
 
     <app-section color="black" overlap id="features">
@@ -97,7 +90,7 @@
 </template>
 
 <script>
-import Btn from '@/components/Btn'
+import BuyButton from '@/components/BuyButton'
 import Split from '@/components/Split'
 import AppSection from '@/components/AppSection'
 import FloatingGlyphs from '@/components/FloatingGlyphs'
@@ -108,7 +101,7 @@ import DemoVideo from '@/components/DemoVideo'
 
 export default {
   components: {
-    Btn,
+    BuyButton,
     Split,
     AppSection,
     FloatingGlyphs,

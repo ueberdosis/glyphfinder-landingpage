@@ -24,14 +24,7 @@
         <p class="large">
           Glyphfinder is the missing character search for designers, developers and writers.
         </p>
-        <p>
-          <btn :href="gumroadLink" target="_blank">
-            Buy for $4.99
-          </btn>
-        </p>
-        <p class="meta">
-          30-Day Money-Back Guarantee
-        </p>
+        <buy-button />
       </app-section>
 
       <app-section :clip-bottom="false">
@@ -120,7 +113,7 @@
 </template>
 
 <script>
-import Btn from '@/components/Btn'
+import BuyButton from '@/components/BuyButton'
 import DownloadBtn from '@/components/DownloadBtn'
 import ProductHuntBar from '@/components/ProductHuntBar'
 import Navigation from '@/components/Navigation'
@@ -132,15 +125,8 @@ import FloatingGlyphs from '@/components/FloatingGlyphs'
 import { Grid, GridItem } from '@/components/Grid'
 
 export default {
-  props: {
-    navigationTheme: {
-      default: 'dark',
-      type: String,
-    },
-  },
-
   components: {
-    Btn,
+    BuyButton,
     DownloadBtn,
     ProductHuntBar,
     Navigation,
@@ -151,6 +137,13 @@ export default {
     FloatingGlyphs,
     Grid,
     GridItem,
+  },
+
+  props: {
+    navigationTheme: {
+      default: 'dark',
+      type: String,
+    },
   },
 }
 </script>

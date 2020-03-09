@@ -147,14 +147,6 @@ small,
   font-weight: 500;
 }
 
-.meta {
-  display: block;
-  font-size: 1rem;
-  font-weight: 600;
-  font-style: italic;
-  opacity: 0.7;
-}
-
 .large {
   @media screen and (min-width: 700px) {
     font-size: 2rem;
