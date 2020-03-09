@@ -60,7 +60,7 @@
             </grid-item>
           </grid>
           <p>
-            Made with ❤️ by <a href="https://twitter.com/_ueberdosis" target="_blank">überdosis</a> · Icon designed by <a href="https://twitter.com/_philippkuehn" target="_blank">Philipp Kühn</a>
+            Made with ❤️ by <a href="https://twitter.com/_ueberdosis" target="_blank">überdosis</a>
           </p>
         </grid-item>
         <grid-item :options="{ medium: '6/12' }">
