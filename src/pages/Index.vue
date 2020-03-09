@@ -15,6 +15,9 @@
           Get it now
         </btn>
       </p>
+      <p class="meta">
+        30-Day Money-Back Guarantee
+      </p>
     </app-section>
 
     <app-section color="black" overlap id="features">

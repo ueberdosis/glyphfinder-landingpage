@@ -29,6 +29,9 @@
             Buy for $4.99
           </btn>
         </p>
+        <p class="meta">
+          30-Day Money-Back Guarantee
+        </p>
       </app-section>
 
       <app-section :clip-bottom="false">
