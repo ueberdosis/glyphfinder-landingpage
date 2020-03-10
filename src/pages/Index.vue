@@ -55,7 +55,7 @@
     <app-section color="deep-black">
       <grid :options="{ default: 'wide'}">
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
-          <small-feature-item title="30.000+ Glyphs" icon="glyphs">
+          <small-feature-item title="34.306 Glyphs" icon="glyphs">
             With our enormous database you have more than 30.000 characters right at your fingertips, every single one manually tagged.
           </small-feature-item>
         </grid-item>

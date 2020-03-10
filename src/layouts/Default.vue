@@ -8,11 +8,11 @@
     <main class="app__content">
       <slot />
 
-      <app-section color="deep-black">
+      <!-- <app-section color="deep-black">
         <client-only>
           <testimonials />
         </client-only>
-      </app-section>
+      </app-section> -->
 
       <app-section color="red" narrow>
         <template v-slot:background>
@@ -43,12 +43,17 @@
                 To be honest, not at all. Currently, there are 130.000+ characters in unicode. We focus on Western glyphs and emojis (all!) and filter out everything that can’t be rendered on your system.
               </p>
               <p>
-                In the end we have 30.000+ characters, all of them manually tagged. That should be enough for your daily work. <a href="mailto:support@glyphfinder.com">Let us know</a> if you think anything important is missing!
+                In the end we have 34,306 characters, all of them manually tagged. That should be enough for your daily work. <a href="mailto:support@glyphfinder.com">Let us know</a> if you think anything important is missing!
               </p>
             </accordion>
             <accordion title="Is Glyphfinder available for Linux?">
               <p>
                 Not for now. But <a href="mailto:support@glyphfinder.com">give us a shout</a> and we’ll consider it.
+              </p>
+            </accordion>
+            <accordion title="How can I copy a character?">
+              <p>
+                You can use Control + C on Windows, Command + C on macOS, double-click or press Enter to copy the selected character.
               </p>
             </accordion>
           </grid-item>
