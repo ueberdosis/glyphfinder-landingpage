@@ -1,6 +1,11 @@
 <template>
   <div class="download-button">
-    <btn class="download-button__btn" :href="href" :download="download">
+    <btn
+      class="download-button__btn"
+      :href="href"
+      :download="download"
+      @click.native="handleClick"
+    >
       <icon class="download-button__icon" :name="icon" v-if="icon" />
       <span class="download-button__content">
         <span class="download-button__label">
@@ -56,6 +61,12 @@ export default {
     download: {
       default: true,
       type: Boolean,
+    },
+  },
+
+  methods: {
+    handleClick() {
+      window.sa_event(`click_download_on_${this.os}`)
     },
   },
 }
