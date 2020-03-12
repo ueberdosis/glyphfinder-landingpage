@@ -27,7 +27,7 @@
         <buy-button />
       </app-section>
 
-      <app-section :clip-bottom="false">
+      <app-section>
         <h2 class="white">
           FAQ
         </h2>
@@ -86,7 +86,7 @@
         </grid>
       </app-section>
 
-      <app-section color="black" id="download">
+      <app-section color="black" id="download" :clip-bottom="false">
         <h2 class="white">
           Download
         </h2>
