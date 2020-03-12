@@ -1,7 +1,7 @@
 <template>
   <div class="app-footer small">
     <product-banner
-      href="https://mouseless.app/?ref=glyphfinder"
+      href="https://www.mouseless.app/?ref=glyphfinder"
       color="#FDD231"
       headline="Have you seen Mouseless?"
       subline="Unleash your keyboard’s superpower →"
