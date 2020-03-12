@@ -1,7 +1,7 @@
 <template>
   <div class="buy-button">
     <div class="buy-button__content">
-      <btn :href="gumroadLink" target="_blank">
+      <btn :href="gumroadLink" target="_blank" @click.native="handleClick">
         {{ label }}
       </btn>
       <icon class="buy-button__icon" name="mac" title="macOS" />
@@ -27,6 +27,12 @@ export default {
     label: {
       default: 'Buy for $4.99',
       type: String,
+    },
+  },
+
+  methods: {
+    handleClick() {
+      window.sa_event(`click_buy_on_${this.os}`)
     },
   },
 }

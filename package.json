@@ -9,6 +9,7 @@
   "dependencies": {
     "@gridsome/plugin-sitemap": "^0.2.3",
     "axios": "^0.19.2",
+    "bowser": "^2.9.0",
     "collect.js": "^4.20.3",
     "d3-scale": "^3.2.1",
     "gridilydidily": "^3.0.1",
