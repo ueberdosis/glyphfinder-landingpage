@@ -8,11 +8,11 @@
     <main class="app__content">
       <slot />
 
-      <!-- <app-section color="deep-black">
+      <app-section color="deep-black">
         <client-only>
           <testimonials />
         </client-only>
-      </app-section> -->
+      </app-section>
 
       <app-section color="red" narrow>
         <template v-slot:background>

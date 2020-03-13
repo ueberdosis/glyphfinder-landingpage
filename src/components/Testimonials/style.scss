@@ -9,11 +9,13 @@
   }
 
   &__ratings {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
-    width: 6rem;
+    width: 5rem;
     height: auto;
     margin: 1rem 0;
+    top: -0.15rem;
   }
 
   &__item {
