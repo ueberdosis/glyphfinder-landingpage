@@ -67,12 +67,10 @@ export default function (Vue, { router, head, isClient }) {
 
   Vue.use(VueResize)
 
-  const bowserData = Bowser.parse(window.navigator.userAgent)
-
   Vue.mixin({
     data() {
       return {
-        os: bowserData.os.name.toLowerCase(),
+        os: isClient ? Bowser.parse(window.navigator.userAgent).os.name.toLowerCase() : '',
         clipPathSupported: isClient && areClipPathShapesSupported(),
         reducedMotion: isClient ? !!window.matchMedia('(prefers-reduced-motion)').matches : false,
         downloadLinkMac: 'https://ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/mac/Glyphfinder-1.0.0-mac.dmg',
