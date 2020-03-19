@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <product-hunt-bar />
+    <!-- <product-hunt-bar /> -->
     <header class="app__header">
       <navigation :theme="navigationTheme" />
     </header>
@@ -120,7 +120,7 @@
 <script>
 import BuyButton from '@/components/BuyButton'
 import DownloadBtn from '@/components/DownloadBtn'
-import ProductHuntBar from '@/components/ProductHuntBar'
+// import ProductHuntBar from '@/components/ProductHuntBar'
 import Navigation from '@/components/Navigation'
 import AppSection from '@/components/AppSection'
 import AppFooter from '@/components/AppFooter'
@@ -133,7 +133,7 @@ export default {
   components: {
     BuyButton,
     DownloadBtn,
-    ProductHuntBar,
+    // ProductHuntBar,
     Navigation,
     AppSection,
     AppFooter,
