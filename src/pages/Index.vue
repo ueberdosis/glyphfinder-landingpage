@@ -41,12 +41,23 @@
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
           <feature-item title="The Best Emoji Search" video="emojis.mp4">
-            We have manually added and tagged every single emoji. That probably makes Glyphfinder the single best emoji search out there. 🧐
+            We have manually added and tagged every single emoji. That probably makes Glyphfinder the single best emoji search out there.
           </feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
           <feature-item title="Learn More" video="shortcuts.mp4">
-            In case you want to go mouseless, learn the keyboard shortcuts for all your favorite glyphs right away. Coders copy the entity.
+            In case you want to go mouseless, learn the keyboard shortcuts for all your favorite glyphs right away. Developers copy the entity.
+          </feature-item>
+        </grid-item>
+        <grid-item :options="{ small: '6/12', medium: '4/12'}">
+          <feature-item title="By Your Side" video="menubar.mp4">
+            By default, Glyphfinder lives in your menubar. One click and it’s open. Copy a character and it automagically disappears again.
+          </feature-item>
+        </grid-item>
+        <grid-item :options="{ small: '6/12', medium: '4/12'}">
+          <feature-item title="Your New Shortcut" video="shortcut.mp4">
+            Don’t waste time moving your cursor to the menubar. Hit the shortcut
+            <shortcut :keys="['⇧', '⌘', 'G']" /> on macOS or <shortcut :keys="['⇧', 'ctrl', 'G']" /> on Windows to open Glyphfinder even faster.
           </feature-item>
         </grid-item>
       </grid>
@@ -98,6 +109,7 @@ import FeatureItem from '@/components/FeatureItem'
 import SmallFeatureItem from '@/components/SmallFeatureItem'
 import { Grid, GridItem } from '@/components/Grid'
 import DemoVideo from '@/components/DemoVideo'
+import Shortcut from '@/components/Shortcut'
 
 export default {
   components: {
@@ -110,6 +122,7 @@ export default {
     Grid,
     GridItem,
     DemoVideo,
+    Shortcut,
   },
 }
 </script>
