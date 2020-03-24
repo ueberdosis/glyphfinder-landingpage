@@ -41,12 +41,17 @@
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
           <feature-item title="The Best Emoji Search" video="emojis.mp4">
-            We have manually added and tagged every single emoji. That probably makes Glyphfinder the single best emoji search out there. 🧐
+            We have manually added and tagged every single emoji. That probably makes Glyphfinder the single best emoji search out there.
           </feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
           <feature-item title="Learn More" video="shortcuts.mp4">
             In case you want to go mouseless, learn the keyboard shortcuts for all your favorite glyphs right away. Coders copy the entity.
+          </feature-item>
+        </grid-item>
+        <grid-item :options="{ small: '6/12', medium: '4/12'}">
+          <feature-item title="Menubar" video="menubar.mp4">
+            xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx.
           </feature-item>
         </grid-item>
       </grid>
