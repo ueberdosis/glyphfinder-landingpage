@@ -55,7 +55,7 @@
           </feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
-          <feature-item title="Your New Shortcut" video="menubar.mp4">
+          <feature-item title="Your New Shortcut" video="shortcut.mp4">
             Don’t waste time moving your cursor to the menubar. Hit the shortcut
             <shortcut :keys="['⇧', '⌘', 'G']" /> on macOS or <shortcut :keys="['⇧', 'ctrl', 'G']" /> on Windows to open Glyphfinder even faster.
           </feature-item>
