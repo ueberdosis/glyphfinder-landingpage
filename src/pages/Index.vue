@@ -45,7 +45,7 @@
           </feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
-          <feature-item title="Learn Shortcuts" video="shortcuts.mp4">
+          <feature-item title="Learn More" video="shortcuts.mp4">
             In case you want to go mouseless, learn the keyboard shortcuts for all your favorite glyphs right away. Developers copy the entity.
           </feature-item>
         </grid-item>
