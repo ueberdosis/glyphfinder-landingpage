@@ -45,19 +45,19 @@
           </feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
-          <feature-item title="Learn More" video="shortcuts.mp4">
-            In case you want to go mouseless, learn the keyboard shortcuts for all your favorite glyphs right away. Coders copy the entity.
+          <feature-item title="Learn Shortcuts" video="shortcuts.mp4">
+            In case you want to go mouseless, learn the keyboard shortcuts for all your favorite glyphs right away. Developers copy the entity.
           </feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
-          <feature-item title="Menubar" video="menubar.mp4">
-            xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx.
+          <feature-item title="By Your Side" video="menubar.mp4">
+            By default, Glyphfinder lives in your menubar. And if you like, it automagically disappears after you copied a character.
           </feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
-          <feature-item title="Shortcut" video="menubar.mp4">
-            xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx.
-            <shortcut :keys="['⇧', '⌘', 'G']" /> / <shortcut :keys="['⇧', 'ctrl', 'G']" />
+          <feature-item title="Your New Shortcut" video="menubar.mp4">
+            Don’t waste time moving your cursor to the menubar. Hit the shortcut
+            <shortcut :keys="['⇧', '⌘', 'G']" /> on macOS or <shortcut :keys="['⇧', 'ctrl', 'G']" /> on Windows to open Glyphfinder even faster.
           </feature-item>
         </grid-item>
       </grid>
