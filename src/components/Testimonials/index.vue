@@ -97,6 +97,18 @@ export default {
           text: 'Do want!',
           title: 'Allan White, Contentful',
         },
+        // https://twitter.com/greg00r/status/1240603853722091520
+        {
+          avatar: require('~/assets/images/avatars/gregorweichbrodt.jpg'),
+          text: 'They tagged ~34K glyphs manually (!), so the search for glyphs (emojis included) becomes a breeze. Well done and thank you!!👏',
+          title: 'Gregor Weichbrodt, FragDenStaat',
+        },
+        // https://twitter.com/justin_schueler/status/1240586673165160448
+        {
+          avatar: require('~/assets/images/avatars/justinschueler.jpg'),
+          text: 'soo good and useful 🙏🏻',
+          title: 'Justin Schueler, Freelance Digital Designer',
+        },
       ])
         .map(item => ({
           ...item,
