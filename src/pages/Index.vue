@@ -54,6 +54,12 @@
             xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx.
           </feature-item>
         </grid-item>
+        <grid-item :options="{ small: '6/12', medium: '4/12'}">
+          <feature-item title="Shortcut" video="menubar.mp4">
+            xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx xxxx xx xxxx xx xxxxxxx xx xxxxx.
+            <shortcut :keys="['⇧', '⌘', 'G']" /> / <shortcut :keys="['⇧', 'ctrl', 'G']" />
+          </feature-item>
+        </grid-item>
       </grid>
     </app-section>
 
@@ -103,6 +109,7 @@ import FeatureItem from '@/components/FeatureItem'
 import SmallFeatureItem from '@/components/SmallFeatureItem'
 import { Grid, GridItem } from '@/components/Grid'
 import DemoVideo from '@/components/DemoVideo'
+import Shortcut from '@/components/Shortcut'
 
 export default {
   components: {
@@ -115,6 +122,7 @@ export default {
     Grid,
     GridItem,
     DemoVideo,
+    Shortcut,
   },
 }
 </script>

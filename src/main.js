@@ -67,6 +67,16 @@ export default function (Vue, { router, head, isClient }) {
 
   Vue.use(VueResize)
 
+  Vue.filter('uppercase', value => {
+    const ignoredCharacters = ['ß']
+
+    if (ignoredCharacters.includes(value)) {
+      return value
+    }
+
+    return value.toUpperCase()
+  })
+
   Vue.mixin({
     data() {
       return {

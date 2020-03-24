@@ -53,7 +53,7 @@
             </accordion>
             <accordion title="How can I copy a character?">
               <p>
-                You can use Control + C on Windows, Command + C on macOS, double-click or press Enter to copy the selected character.
+                You can use <shortcut :keys="['ctrl', 'c']" /> on Windows, <shortcut :keys="['⌘', 'c']" /> on macOS, double-click or press Enter to copy the selected character.
               </p>
             </accordion>
           </grid-item>
@@ -128,6 +128,7 @@ import Accordion from '@/components/Accordion'
 import Testimonials from '@/components/Testimonials'
 import FloatingGlyphs from '@/components/FloatingGlyphs'
 import { Grid, GridItem } from '@/components/Grid'
+import Shortcut from '@/components/Shortcut'
 
 export default {
   components: {
@@ -142,6 +143,7 @@ export default {
     FloatingGlyphs,
     Grid,
     GridItem,
+    Shortcut,
   },
 
   props: {
