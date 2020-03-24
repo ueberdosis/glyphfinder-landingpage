@@ -40,27 +40,25 @@
             </accordion>
             <accordion title="Does Glyphfinder have all unicode characters in the world?">
               <p>
-                To be honest, not at all. Currently, there are 130.000+ characters in unicode. We focus on Western glyphs and emojis (all!) and filter out everything that can’t be rendered on your system.
+                To be honest, not at all. Currently, there are 130.000+ characters in the Unicode set. We focus on a subset of those and filter out everything that can not be rendered on your system.
               </p>
               <p>
                 In the end we have 34,306 characters, all of them manually tagged. That should be enough for your daily work. <a href="mailto:support@glyphfinder.com">Let us know</a> if you think anything important is missing!
               </p>
             </accordion>
-            <accordion title="Is Glyphfinder available for Linux?">
-              <p>
-                Not for now. But <a href="mailto:support@glyphfinder.com">give us a shout</a> and we’ll consider it.
-              </p>
-            </accordion>
             <accordion title="How can I copy a character?">
               <p>
-                You can use <shortcut :keys="['ctrl', 'c']" /> on Windows, <shortcut :keys="['⌘', 'c']" /> on macOS, double-click or press Enter to copy the selected character.
+                You can double-click on, press Enter or press <shortcut :keys="['ctrl', 'c']" /> on Windows and <shortcut :keys="['⌘', 'c']" /> on macOS to copy the selected character.
+              </p>
+              <p>
+                Open the preferences <shortcut :keys="['⌘', ',']" /> to chose whether you want Glyphfinder to disappear after copying a character.
               </p>
             </accordion>
           </grid-item>
           <grid-item :options="{ medium: '6/12'}">
             <accordion title="Something’s wrong. How do I get in touch?">
               <p>
-                Sorry to hear something is off. <a href="mailto:support@glyphfinder.com">Send us an email</a>, we’ll be happy to help!
+                Sorry to hear something is off. <a href="mailto:support@glyphfinder.com">Send us an email</a>, we are happy to help.
               </p>
             </accordion>
             <accordion title="I have a great idea, whom should I send an email?">
@@ -73,7 +71,7 @@
             </accordion>
             <accordion title="Do you collect my personal data?">
               <p>
-                The app needs the internet connection to check your license once, everything else is working offline. We don’t track anything at all, except the number of sales and the number of pageviews.
+                The app needs the internet connection to check your license once, everything else is working offline. We don’t track anything at all, except the number of sales and the <a href="https://simpleanalytics.com/glyphfinder.com">number of pageviews</a> on this website.
               </p>
               <p>
                 To learn more, check out our
