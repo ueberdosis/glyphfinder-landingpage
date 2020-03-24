@@ -25,7 +25,7 @@ export default {
 
   props: {
     label: {
-      default: 'Buy for $5.99',
+      default: 'Buy for $6.99',
       type: String,
     },
   },
