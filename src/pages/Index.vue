@@ -51,7 +51,7 @@
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
           <feature-item title="By Your Side" video="menubar.mp4">
-            By default, Glyphfinder lives in your menubar. And if you like, it automagically disappears after you copied a character.
+            By default, Glyphfinder lives in your menubar. One click and it’s open, copy the character and it automagically disappears again.
           </feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
