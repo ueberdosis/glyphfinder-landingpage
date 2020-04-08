@@ -4,7 +4,8 @@
   "scripts": {
     "build": "gridsome build",
     "start": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "deploy": "gridsome build && netlify deploy --prod --dir dist"
   },
   "dependencies": {
     "@gridsome/plugin-sitemap": "^0.2.3",
