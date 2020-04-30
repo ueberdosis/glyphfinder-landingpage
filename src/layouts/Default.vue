@@ -103,6 +103,13 @@
             :href="downloadLinkWin"
             meta="Windows 10"
           />
+          <download-btn
+            icon="setapp"
+            label="Available on"
+            text="Setapp"
+            href="https://go.setapp.com/stp268?refAppID=388&utm_medium=available_on_setapp_button&utm_source=388&utm_campaign=https://glyphfinder.com/"
+            :download="false"
+          />
         </div>
       </app-section>
     </main>
