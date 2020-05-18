@@ -84,7 +84,7 @@ export default function (Vue, { router, head, isClient }) {
         clipPathSupported: isClient && areClipPathShapesSupported(),
         reducedMotion: isClient ? !!window.matchMedia('(prefers-reduced-motion)').matches : false,
         downloadLinkMac: 'https://ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/mac/Glyphfinder-1.2.0-mac.dmg',
-        downloadLinkWin: 'https://ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/win/Glyphfinder-1.1.1-win.exe',
+        downloadLinkWin: 'https://ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/win/Glyphfinder-1.2.0-win.exe',
         gumroadLink: 'https://gum.co/ZaEQz',
       }
     },
