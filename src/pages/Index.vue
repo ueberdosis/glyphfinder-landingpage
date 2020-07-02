@@ -57,7 +57,7 @@
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
           <feature-item title="Your New Shortcut" video="shortcut.mp4">
             Don’t waste time moving your cursor to the menubar. Hit the shortcut
-            <shortcut :keys="['⌃', '⌘', 'G']" /> on macOS or <shortcut :keys="['CTRL', '❖', 'G']" /> on Windows to open Glyphfinder even faster.
+            <shortcut :keys="['⌃', '⌘', 'G']" /> on macOS <!--or <shortcut :keys="['CTRL', '❖', 'G']" /> on Windows--> to open Glyphfinder even faster.
           </feature-item>
         </grid-item>
       </grid>
@@ -90,11 +90,11 @@
             No one wants a flash of bright light in their face when looking up a few glyphs. Enjoy the dark theme for Glyphfinder, it’s the only theme anyway.
           </small-feature-item>
         </grid-item>
-        <grid-item :options="{ small: '6/12', medium: '4/12'}">
-          <small-feature-item title="macOS & Windows" icon="mac">
+        <!-- <grid-item :options="{ small: '6/12', medium: '4/12'}">
+          <small-feature-item title="macOS" icon="mac">
             Glyphfinder will work on your favorite operating system (as long as it’s not Linux). All licenses include both apps.
           </small-feature-item>
-        </grid-item>
+        </grid-item> -->
       </grid>
     </app-section>
   </Layout>

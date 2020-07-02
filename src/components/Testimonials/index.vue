@@ -79,12 +79,12 @@ export default {
           text: 'Thank you for taking the time to build this. Finding glyphs has always been a struggle for me too.',
           title: 'Travis Topham, Smartcare',
         },
-        // https://twitter.com/rsms/status/1238124248796823553
-        {
-          avatar: require('~/assets/images/avatars/rasmusandersson.jpg'),
-          text: 'Looks like a great little app for Windows users where there’s no built-in Unicode browser.',
-          title: 'Rasmus Andersson, Figma',
-        },
+        // // https://twitter.com/rsms/status/1238124248796823553
+        // {
+        //   avatar: require('~/assets/images/avatars/rasmusandersson.jpg'),
+        //   text: 'Looks like a great little app for Windows users where there’s no built-in Unicode browser.',
+        //   title: 'Rasmus Andersson, Figma',
+        // },
         // https://twitter.com/mds/status/1238208495872327687
         {
           avatar: require('~/assets/images/avatars/mds.jpg'),

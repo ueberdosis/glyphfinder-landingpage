@@ -48,7 +48,7 @@
             </accordion>
             <accordion title="How can I copy a character?">
               <p>
-                You can double-click on, press Enter or press <shortcut :keys="['ctrl', 'c']" /> on Windows and <shortcut :keys="['⌘', 'c']" /> on macOS to copy the selected character.
+                You can double-click on, press Enter or press <!--<shortcut :keys="['ctrl', 'c']" /> on Windows and--> <shortcut :keys="['⌘', 'c']" /> on macOS to copy the selected character.
               </p>
               <p>
                 Open the preferences <shortcut :keys="['⌘', ',']" /> to chose whether you want Glyphfinder to disappear after copying a character.
@@ -96,13 +96,13 @@
             :href="downloadLinkMac"
             meta="macOS 10.13 or higher"
           />
-          <download-btn
+          <!-- <download-btn
             icon="windows"
             label="Download for"
             text="Windows"
             :href="downloadLinkWin"
             meta="Windows 10"
-          />
+          /> -->
           <download-btn
             icon="setapp"
             label="Available on"

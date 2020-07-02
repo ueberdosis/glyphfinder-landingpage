@@ -5,7 +5,7 @@
         {{ label }}
       </btn>
       <icon class="buy-button__icon" name="mac" title="macOS" />
-      <icon class="buy-button__icon" name="windows" title="Windows" />
+      <!-- <icon class="buy-button__icon" name="windows" title="Windows" /> -->
     </div>
     <div class="buy-button__meta">
       30-Day Money-Back Guarantee
@@ -25,7 +25,7 @@ export default {
 
   props: {
     label: {
-      default: 'Buy for $7.99',
+      default: 'Buy for $6.99',
       type: String,
     },
   },
