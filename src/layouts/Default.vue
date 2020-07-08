@@ -96,13 +96,13 @@
             :href="downloadLinkMac"
             meta="macOS 10.13 or higher"
           />
-          <!-- <download-btn
+          <download-btn
             icon="windows"
             label="Download for"
             text="Windows"
             :href="downloadLinkWin"
             meta="Windows 10"
-          /> -->
+          />
           <download-btn
             icon="setapp"
             label="Available on"
