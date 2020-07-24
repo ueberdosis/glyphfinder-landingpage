@@ -1,5 +1,6 @@
 # Glyphfinder Landingpage
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/45c0c0eb-91a6-48eb-9dce-9fdb0dbd2ac3/deploy-status)](https://app.netlify.com/sites/glyphfinder/deploys)
 [![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub)](https://github.com/sponsors/ueberdosis)
 
 <img width="640" src="https://github.com/ueberdosis/glyphfinder-landingpage/blob/master/static/screenshot.png?raw=true">
