@@ -1,11 +1,11 @@
 {
   "name": "glyphfinder-landingpage",
-  "private": true,
+  "description": "Unicode character search for macOS & Windows.",
+  "author": "überdosis GbR <support@glyphfinder.com>",
   "scripts": {
     "build": "gridsome build",
     "start": "gridsome develop",
-    "explore": "gridsome explore",
-    "deploy": "gridsome build && netlify deploy --prod --dir dist"
+    "explore": "gridsome explore"
   },
   "dependencies": {
     "@gridsome/plugin-sitemap": "^0.2.3",
