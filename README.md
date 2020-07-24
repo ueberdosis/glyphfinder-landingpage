@@ -1,16 +1,5 @@
 # Glyphfinder Landingpage
 
-### Start
-
-`yarn start`
-
-### Build
-
-`yarn build`
-
-
-# Glyphfinder Landingpage
-
 [![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub)](https://github.com/sponsors/ueberdosis)
 
 This landingpage is used to promote [Glyphfinder](https://github.com/ueberdosis/glyphfinder-landing) (which is open source, too). We used Gridsome (based on Vue.js) as a static site generator. The master branch is deployed to https://www.glyphfinder.com on push.
