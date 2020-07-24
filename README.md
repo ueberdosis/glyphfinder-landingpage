@@ -1,10 +1,11 @@
 # Glyphfinder Landingpage
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/45c0c0eb-91a6-48eb-9dce-9fdb0dbd2ac3/deploy-status)](https://app.netlify.com/sites/glyphfinder/deploys)
 [![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub)](https://github.com/sponsors/ueberdosis)
 
-This landingpage is used to promote [Glyphfinder](https://github.com/ueberdosis/glyphfinder-landing) (which is open source, too). We use [Gridsome](https://gridsome.org/) (based on Vue.js) as a static site generator. Funfact: The master branch is deployed to https://www.glyphfinder.com on push.
+<img width="640" src="https://github.com/ueberdosis/glyphfinder-landingpage/blob/master/static/screenshot.png?raw=true">
 
-<img width="452" alt="VMhqvQhFOy" src="https://user-images.githubusercontent.com/2500670/87650646-40679f80-c752-11ea-9c21-e65f1b0097a9.png">
+This landingpage is used to promote [Glyphfinder](https://github.com/ueberdosis/glyphfinder-landing) (which is open source, too). We use [Gridsome](https://gridsome.org/) (based on Vue.js) as a static site generator. Funfact: The master branch is deployed to https://www.glyphfinder.com on push.
 
 ## Contribution
 
