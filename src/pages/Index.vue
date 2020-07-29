@@ -5,7 +5,7 @@
         <floating-glyphs />
       </template>
       <h1 class="huge">
-        Every fricking glyph at your fingertips
+        Every fricking character at your fingertips
       </h1>
       <p class="large">
         Glyphfinder is the missing character search for designers, developers and writers.
@@ -36,7 +36,7 @@
       <grid :options="{ default: 'wide'}">
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
           <feature-item title="Looks like …" video="lookalikes.mp4">
-            It’s easier to visually remember a glyph, so we made it easy to search for look-alikes. Type anything you remember and find the correct glyph instantly.
+            It’s easier to visually remember a character, so we integrated look-alikes for you. Find characters, no need to know their name.
           </feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
@@ -56,8 +56,8 @@
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
           <feature-item title="Your New Shortcut" video="shortcut.mp4">
-            Don’t waste time moving your cursor to the menubar. Hit the shortcut
-            <shortcut :keys="['⌃', '⌘', 'G']" /> on macOS <!--or <shortcut :keys="['CTRL', '❖', 'G']" /> on Windows--> to open Glyphfinder even faster.
+            Don’t waste time moving your cursor to the menubar. Hit the keyboard shortcut
+            <shortcut :keys="['⌃', '⌘', 'G']" /> <!--or <shortcut :keys="['CTRL', '❖', 'G']" /> on Windows--> to open Glyphfinder even faster.
           </feature-item>
         </grid-item>
       </grid>
@@ -66,13 +66,13 @@
     <app-section color="deep-black">
       <grid :options="{ default: 'wide'}">
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
-          <small-feature-item title="34.306 Glyphs" icon="glyphs">
-            With our enormous database you have more than 30.000 characters right at your fingertips, every single one manually tagged.
+          <small-feature-item title="34.306 Entities" icon="glyphs">
+            With our enormous database you have more than 30.000 characters and emojis right at your fingertips, every single one manually tagged.
           </small-feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
           <small-feature-item title="Quick Access" icon="frequently-used">
-            Don‘t feel ashamed looking up characters multiple times. Your most frequently used glyphs will be pinned to the top.
+            Don‘t feel ashamed looking up characters multiple times. Your most frequently used entities will be pinned to the top.
           </small-feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
@@ -86,8 +86,8 @@
           </small-feature-item>
         </grid-item>
         <grid-item :options="{ small: '6/12', medium: '4/12'}">
-          <small-feature-item title="Dark Mode by Default" icon="dark-mode">
-            No one wants a flash of bright light in their face when looking up a few glyphs. Enjoy the dark theme for Glyphfinder, it’s the only theme anyway.
+          <small-feature-item title="Light & Dark Mode" icon="dark-mode">
+            No one wants a flash of bright light in their face when looking up a few entities. Glyphfinder respects your system setting.
           </small-feature-item>
         </grid-item>
         <!-- <grid-item :options="{ small: '6/12', medium: '4/12'}">

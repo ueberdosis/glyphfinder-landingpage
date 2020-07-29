@@ -28,6 +28,11 @@
                   </a>
                 </li>
                 <li>
+                  <a href="https://github.com/ueberdosis/glyphfinder" target="_blank">
+                    GitHub
+                  </a>
+                </li>
+                <li>
                   <a href="mailto:support@glyphfinder.com" target="_blank">
                     Support
                   </a>
@@ -38,7 +43,7 @@
               <ul>
                 <li>
                   <a href="https://floatie.app/glyphfinder" target="_blank">
-                    Open Startup
+                    Revenue
                   </a>
                 </li>
                 <li>

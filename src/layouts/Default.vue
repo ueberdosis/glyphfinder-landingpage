@@ -79,6 +79,9 @@
                   Privacy Policy
                 </g-link>.
               </p>
+              <p>
+                And the whole Glyphfinder app is open source. Feel free to <a href="https://github.com/ueberdosis/glyphfinder">have a look at the code</a>.
+              </p>
             </accordion>
           </grid-item>
         </grid>
