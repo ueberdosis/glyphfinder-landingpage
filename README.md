@@ -5,7 +5,7 @@
 
 <img width="640" src="https://github.com/ueberdosis/glyphfinder-landingpage/blob/main/static/screenshot.png?raw=true">
 
-This landingpage is used to promote [Glyphfinder](https://github.com/ueberdosis/glyphfinder-landing) (which is open source, too). We use [Gridsome](https://gridsome.org/) (based on Vue.js) as a static site generator. Funfact: The master branch is deployed to https://www.glyphfinder.com on push.
+This landingpage is used to promote [Glyphfinder](https://github.com/ueberdosis/glyphfinder-landing) (which is open source, too). We use [Gridsome](https://gridsome.org/) (based on Vue.js) as a static site generator. Funfact: The main branch is deployed to https://www.glyphfinder.com on push.
 
 ## Contribution
 
@@ -31,6 +31,6 @@ yarn start
 
 * [ueberdosis/glyphfinder](https://github.com/ueberdosis/glyphfinder)
 * [ueberdosis/mouseless](https://github.com/ueberdosis/mouseless) (access for GitHub sponsors only)
-* [ueberdosis/mouseless-landingpage](https://github.com/ueberdosis/mouseless-landingpage) (access for GitHub sponsors only)
+* [ueberdosis/mouseless-landingpage](https://github.com/ueberdosis/mouseless-landingpage)
 * [ueberdosis/matter](https://github.com/ueberdosis/matter) (access for GitHub sponsors only)
 * [ueberdosis/matter-landingpage](https://github.com/ueberdosis/matter-landingpage) (access for GitHub sponsors only)
