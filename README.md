@@ -5,7 +5,7 @@
 
 <img width="640" src="https://github.com/ueberdosis/glyphfinder-landingpage/blob/main/static/screenshot.png?raw=true">
 
-This landingpage is used to promote [Glyphfinder](https://github.com/ueberdosis/glyphfinder-landing) (which is open source, too). We use [Gridsome](https://gridsome.org/) (based on Vue.js) as a static site generator. Funfact: The main branch is deployed to https://www.glyphfinder.com on push.
+This landingpage is used to promote [Glyphfinder](https://github.com/ueberdosis/glyphfinder) (which is open source, too). We use [Gridsome](https://gridsome.org/) (based on Vue.js) as a static site generator. Funfact: The main branch is deployed to https://www.glyphfinder.com on push.
 
 ## Contribution
 
