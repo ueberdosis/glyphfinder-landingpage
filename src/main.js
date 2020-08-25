@@ -83,7 +83,7 @@ export default function (Vue, { router, head, isClient }) {
         os: isClient ? Bowser.parse(window.navigator.userAgent).os.name.toLowerCase() : '',
         clipPathSupported: isClient && areClipPathShapesSupported(),
         reducedMotion: isClient ? !!window.matchMedia('(prefers-reduced-motion)').matches : false,
-        downloadLinkMac: 'https://ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/mac/Glyphfinder-1.4.0-mac.dmg',
+        downloadLinkMac: 'https://ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/mac/Glyphfinder-1.4.1-mac.dmg',
         downloadLinkWin: 'https://ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/win/Glyphfinder-1.3.0-win.exe',
         gumroadLink: 'https://gum.co/ZaEQz',
       }
