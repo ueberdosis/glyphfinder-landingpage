@@ -11,7 +11,7 @@
     ${scripts}
 
     ${process.env.NODE_ENV === 'production'
-      ? '<script async defer src="https://data.glyphfinder.com/app.js"></script><noscript><img src="https://data.glyphfinder.com/image.gif" alt=""></noscript>'
+      ? '<script async defer data-domain="glyphfinder.com" src="https://plausible.io/js/plausible.js"></script>'
       : ''
     }
   </body>
