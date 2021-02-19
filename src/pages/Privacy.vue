@@ -40,12 +40,6 @@
       <p>
         Or have a look at our analytics dashboard: <a href="https://simpleanalytics.com/glyphfinder.com">https://simpleanalytics.com/glyphfinder.com</a>
       </p>
-      <h3>
-        Floatie
-      </h3>
-      <p>
-        We built a service that aggregates data from all those services (SimpleAnalytics, Gumroad) and shows a public dashboard with all the metrics: <a href="https://floatie.app/glyphfinder">https://floatie.app/glyphfinder</a>. It does not store any personal information.
-      </p>
       <h1>
         Privacy Policy for Glyphfinder
       </h1>

@@ -42,11 +42,6 @@
             <grid-item :options="{ medium: '6/12' }">
               <ul>
                 <li>
-                  <a href="https://floatie.app/glyphfinder" target="_blank">
-                    Revenue
-                  </a>
-                </li>
-                <li>
                   <a href="/glyphfinder-press-kit.zip" download>
                     Press Kit
                   </a>
