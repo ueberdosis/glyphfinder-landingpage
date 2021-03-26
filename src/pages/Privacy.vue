@@ -32,13 +32,13 @@
         To actually deliver the emails to you, we use the service Mailgun. <a href="https://www.mailgun.com/gdpr/">Read more about Mailgun’s Privacy Policy</a>
       </p>
       <h3>
-        Simple Analytics
+        Plausible
       </h3>
       <p>
-        To get critical information about the behavior of our visitors, we use <a href="https://simpleanalytics.com" target="_blank">Simple Analytics</a>. This analytics software gives us insight about our visitors only in general, but not about individuals per say, as it does not track visitors and does not store any personal identifiable information. <a href="https://docs.simpleanalytics.com/what-we-collect" target="_blank">Go to their documentation</a> to find out what Simple Analytics collects (and most importantly what they don't).
+        We use <a href="https://plausible.io">Plausible</a> to gain insight about our visitors in general. It doesn’t track individual users per se and does not store any personal identifiable information. Go to <a href="https://plausible.io/data-policy">their documentation</a> to find out what Simple Analytics collects (and more importantly what they don’t).
       </p>
       <p>
-        Or have a look at our analytics dashboard: <a href="https://simpleanalytics.com/glyphfinder.com">https://simpleanalytics.com/glyphfinder.com</a>
+        Or have a look at the <a href="https://plausible.io/glyphfinder.com">public analytics dashboard</a> they provide. It’s not a stripped down version, it’s the exact same dashboard we use to check the traffic.
       </p>
       <h1>
         Privacy Policy for Glyphfinder

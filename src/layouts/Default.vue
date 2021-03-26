@@ -71,7 +71,7 @@
             </accordion>
             <accordion title="Do you collect my personal data?">
               <p>
-                The app needs the internet connection to check your license once, everything else is working offline. We don’t track anything at all, except the number of sales and the <a href="https://simpleanalytics.com/glyphfinder.com">number of pageviews</a> on this website.
+                The app needs the internet connection to check your license once, everything else is working offline. We don’t track anything at all, except the number of sales and the <a href="https://plausible.io/glyphfinder.com">number of pageviews</a> on this website.
               </p>
               <p>
                 To learn more, check out our
