@@ -35,7 +35,7 @@
         Plausible
       </h3>
       <p>
-        We use <a href="https://plausible.io">Plausible</a> to gain insight about our visitors in general. It doesn’t track individual users per se and does not store any personal identifiable information. Go to <a href="https://plausible.io/data-policy">their documentation</a> to find out what Simple Analytics collects (and more importantly what they don’t).
+        We use <a href="https://plausible.io">Plausible</a> to gain insight about our visitors in general. It doesn’t track individual users per se and does not store any personal identifiable information. Go to <a href="https://plausible.io/data-policy">their data policy</a> to find out what Plausible collects (and more importantly what they don’t).
       </p>
       <p>
         Or have a look at the <a href="https://plausible.io/glyphfinder.com">public analytics dashboard</a> they provide. It’s not a stripped down version, it’s the exact same dashboard we use to check the traffic.
