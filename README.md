@@ -1,3 +1,5 @@
+**🚨 The project is discontinued. Feel free to fork it!**
+
 # Glyphfinder Landingpage
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/45c0c0eb-91a6-48eb-9dce-9fdb0dbd2ac3/deploy-status)](https://app.netlify.com/sites/glyphfinder/deploys)
