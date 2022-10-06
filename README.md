@@ -1,4 +1,4 @@
-**🚨 The project is discontinued. Feel free to fork it!**
+### ⚠️ This project is discontinued. Feel free to fork it!
 
 # Glyphfinder Landingpage
 
